@@ -10,7 +10,7 @@ use open qw(:std :utf8); # This also works for the Diamond Operator
 binmode STDOUT, ':utf8';
 
 # Path to dictionaries
-my $dictpath = "/home/pruhrig/sentence_splitting/";
+my $dictpath = $ARGV[0] or die "Please specifiy the path to the dictionaries\n";
 
 # LOADING RESOURCES
 
@@ -34,7 +34,7 @@ my %fullvalues = (
 
 # Word with colon
 my %coldict;
-open(my $cfh, "<:encoding(UTF-8)", $dictpath."words_with_colons_dictionary.txt") or die "Can't open < words_with_colons_dictionary.txt: $!";
+open(my $cfh, "<:encoding(UTF-8)", $dictpath."/words_with_colons_dictionary.txt") or die "Can't open < words_with_colons_dictionary.txt: $!";
 while (<$cfh>) {
 	chomp;
 	my @fields = split "\t";
@@ -49,7 +49,7 @@ close($cfh);
 my %brackdict;
 my @filenames = ("round_brackets_dictionary.txt", "square_brackets_dictionary.txt");
 foreach my $filename (@filenames) {
-	open(my $bfh, "<:encoding(UTF-8)", $dictpath.$filename) or die "Can't open < $filename: $!";
+	open(my $bfh, "<:encoding(UTF-8)", $dictpath."/".$filename) or die "Can't open < $filename: $!";
 	while (<$bfh>) {
 		chomp;
 		my @fields = split "\t";
@@ -63,7 +63,7 @@ foreach my $filename (@filenames) {
 
 # MAIN LOOP
 print '<?xml version="1.0" encoding="UTF-8"?>',"\n";
-while (my $x = <>) {
+while (my $x = <STDIN>) {
 	chomp $x;
 	$x =~ s/\x00//g;
 	$x =~ s/\x02//g;
@@ -173,12 +173,6 @@ while (my $x = <>) {
 		}
 	}
 
-	print $x;
-
-	# We should only print a newline if the line contains an actual sentence. CoreNLP relies on having one sentence per line and will simply ignore the annotations if they are not on the same line as a sentence.
-	# Replace all XML tags with nothing:
-	$x =~ s/<.*?>//g;
-	# If not only non-word-characters are left, we print a newline.
-	unless ($x =~ /^\W*$) {print "\n";}
+	print $x,"\n";
 
 }
