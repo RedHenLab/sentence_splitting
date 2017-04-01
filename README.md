@@ -17,11 +17,12 @@ xmllint --nouout outputfile.xml
 If this command terminates without printing an error message, the file is well-formed XML.
 
 The output can then be processed with Stanford CoreNLP using the following commands (for version 3.7.0).
+
 Dependency Parser:
 ```bash
 java -XX:+UseNUMA -Xmx3g -cp "/path/to/stanford-corenlp-full-2016-10-31/*" edu.stanford.nlp.pipeline.StanfordCoreNLP -pos.model edu/stanford/nlp/models/pos-tagger/english-caseless-left3words-distsim.tagger -parse.model edu/stanford/nlp/models/srparser/englishSR.beam.ser.gz -annotators tokenize,cleanxml,ssplit,pos,truecase,lemma,ner,depparse -parse.maxlen 100 -ssplit.eolonly true -truecase.overwriteText true -outputFormat json -file outputfile.xml
 ```
-Full pipeline with Shift-Reduce parser with beam search (less robust!!)
+Full pipeline with Shift-Reduce parser with beam search (less robust!!):
 ```bash
 java -XX:+UseNUMA -Xmx5g -XX:MaxMetaspaceSize=1g -Xss2048k -cp "/path/to/stanford-corenlp-full-2016-10-31/*" edu.stanford.nlp.pipeline.StanfordCoreNLP -pos.model edu/stanford/nlp/models/pos-tagger/english-caseless-left3words-distsim.tagger -parse.model edu/stanford/nlp/models/srparser/englishSR.beam.ser.gz -annotators tokenize,cleanxml,ssplit,pos,truecase,lemma,ner,parse,dcoref,relation,natlog,quote,sentiment -parse.maxlen 100 -ssplit.eolonly true -coref.algorithm neural -truecase.overwriteText true -outputFormat json -file outputfile.xml
 ```
