@@ -1,0 +1,149 @@
+#Anything in this file, followed by a period (and an upper-case word), does NOT indicate an end-of-sentence marker.
+#Special cases are included for prefixes that ONLY appear before 0-9 numbers.
+
+#any single upper case letter  followed by a period is not a sentence ender (excluding I occasionally, but we leave it in)
+#usually upper case letters are initials in a name
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+
+#DIESE HIER SIND NIE SATZGRENZEN:
+DR #NO_BOUNDARY#
+Dr #NO_BOUNDARY#
+Drs #NO_BOUNDARY#
+Messrs #NO_BOUNDARY#
+MR #NO_BOUNDARY#
+Mr #NO_BOUNDARY#
+Mrs #NO_BOUNDARY#
+MRS #NO_BOUNDARY#
+Ms #NO_BOUNDARY#
+MS #NO_BOUNDARY#
+#<--------- Multiple Sklerosis? -> bei einer blöden Werbung (bislang 114 instances) am Satzende. Lassen wir aber trotzdem drin.
+St #NO_BOUNDARY#
+#<------------ overwhelmingly nicht am Satzende. Nur ganz wenige "Wall St." am Ende.
+
+
+
+#List of titles. These are often followed by upper-case names, but do not indicate sentence breaks
+Adj
+Adm
+Adv
+Asst
+Bart
+Bldg
+Brig
+Bros
+Capt
+Cmdr
+Col
+Comdr
+#Con
+#<------  case-insensitive problematisch MUSS RAUS
+Corp
+Cpl
+Ens
+Gen
+Gov
+#<--------- case-insensitive problematisch als TLD -> SATZENDE WENN NOCH PLATZ GEWESEN
+Hon
+Hr
+Hosp
+Insp
+Lt
+MM
+Maj
+Mlle
+Mme
+Msgr
+#Op
+#             <--------- Operation -> MUSS RAUS
+Ord
+Pfc
+Ph
+Prof
+Pvt
+Rep
+#            <------------ Representative in "Chevron Rep.:"
+Reps
+#<------------ s.o.
+Res
+#<------------ Das ist größtenteils Quatsch. Behandeln wir als Satzgrenze wenn noch was hingegangen wäre; kann am Satzende stehen.
+Rev
+#<------------ kann am Satzende vorkommen
+Rt
+Sen
+#<------------ steht öfter für senior und dann auch gerne am Satzende.
+Sens
+Sfc
+Sgt
+Sr
+#<------------ steht oft für "senior" und öfters am Satzende.
+Supt
+Surg
+
+#misc - odd period-ending items that NEVER indicate breaks (p.m. does NOT fall into this category - it sometimes ends a sentence)
+v
+vs
+i.e
+#rev            <---------- SIEHE OBEN.
+e.g
+
+#Numbers only. These should only induce breaks when followed by a numeric sequence
+# add NUMERIC_ONLY after the word for this function
+#This case is mostly for the english "No." which can either be a sentence of its own, or
+#if followed by a number, a non-breaking prefix
+No #NUMERIC_ONLY# 
+Nos
+Art #NUMERIC_ONLY#
+Nr
+pp #NUMERIC_ONLY#
+
+# own additions
+fig #NUMERIC_ONLY#
+Fig #NUMERIC_ONLY#
+hon
+cf
+Maj.-Gen
+Lt.-Gen
+Coun
+Lt.-Col
+Fr
+#<---------------- Keine Ahnung was das ist.
+Adml
+viz
+Revd
+Insp
+Ald
+Mons
+Sergt
+Lieut
+Mme
+Lt-Col
+Lt-Gen
+Maj-Gen
+Const
+#al
+#<----------------- Name "Al" -> problem bei non-case-sensitive, daher raus.

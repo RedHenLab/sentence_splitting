@@ -1,0 +1,2859 @@
+[ Male Announcer ]	s	
+[ LAUGHTER ]	p	
+[ CHEERS AND APPLAUSE ]	p	
+[ Female Announcer ]	p	
+[LAUGHTER]	p	
+[APPLAUSE]	p	
+[CHEERS AND APPLAUSE]	p	
+[ APPLAUSE ]	p	
+[ LIGHT LAUGHTER ]	p	
+[ LAUGHTER AND APPLAUSE ]	p	
+[ Woman ]	s	
+[ Man ]	s	
+[ BLEEP ]	a	
+[ CHEERS ]	p	
+[CHEERING]	p	
+[ laughs ]	p	
+[ INAUDIBLE ]	a	
+[Announcer]	s	
+[BEEP]	a	
+[ Announcer ]	s	
+[ MUSIC ]	m	
+[INAUDIBLE]	a	
+[ LAUGHS ]	p	
+[ Mom ]	s	
+[ AUDIENCE OHS ]	p	
+[ Garth ]	s	
+[ Girl ]	s	
+[CHEERING AND APPLAUSE]	p	
+[ CHUCKLES ]	p	
+[ All ]	s	
+[ sniffs ]	p	
+[ RIM SHOT ]	o	
+[ laughter ]	p	
+[ Dad ]	s	
+[ sighs ]	p	
+[cheers and applause]	p	
+[ SCATTERED APPLAUSE ]	p	
+[ SCREAMING ]	p	
+[ Both ]	s	
+[ SPEAKING FOREIGN LANGUAGE ]	f	
+[LAUGHING]	p	
+[ Dennis ]	s	
+[ woman ]	s	
+[BLEEP]	a	
+[ tires screech ]	a	
+[ sneezes ]	p	
+[laughter]	p	
+[CHEERS]	p	
+[MUSIC]	m	
+[ engine revs ]	a	
+[ BUZZER ]	a	
+[SCREAMING]	p	
+[ TALKING OVER EACH OTHER ]	a	
+[ chuckles ]	p	
+[ Banker ]	s	
+[ Bottle ]	s	
+[ DING ]	a	
+[ AUDIENCE OOHS ]	p	
+[ SIGHS ]	p	
+[BELL RINGS]	a	
+[ chirp ]	a	
+[ gasps ]	p	
+[ AUDIENCE AWS ]	p	
+[ AUDIENCE OHs ]	p	
+[ INAUDIBLE QUESTION ]	a	
+[ Jack ]	s	
+[ THUNDER CRASHES ]	a	
+[ CHEERING ]	p	
+[ BEEPING ]	a	
+[Man]	s	
+[â™ª]	o	
+[ man ]	s	
+[ voice of Dennis ]	s	
+[ TRAIN WHISTLE BLOWS ]	a	
+[ GUNFIRE ]	a	
+[â™ªâ™ªâ™ª]	o	
+[INDISCERNIBLE]	a	
+[ laughing ]	p	
+[ ding ]	a	
+[ AUDIENCE GROANS ]	p	
+[ SCATTERED CHEERS ]	p	
+[break]	a	
+[doorbell]	a	
+[ Doctor ]	s	
+[[I/V]	u	
+[ dog barks ]	a	
+[ MEOWS ]	a	
+[ GPS ]	o	
+[ Boy ]	s	
+[LAUGHTER AND APPLAUSE]	p	
+[ Dog ]	a	
+[LAUGHS]	p	
+[ engine revving ]	a	
+[ coughs ]	p	
+[ cellphone rings ]	a	
+[ Sponge ]	s	
+[ Major Nutrition ]	s	
+[ WHIRRING ]	a	
+[laughs]	p	
+[Thinking]	o	
+[UNINTELLIGIBLE]	a	
+[ TIRES SCREECH ]	a	
+[CHANTING]	l	
+[MEOW]	a	
+[SHOUTING]	p	
+[bad violin playing]	w	
+[ Barks ]	a	
+[ Malennouncer ]	s	Male Announcer
+[ GASPS ]	p	
+[[IV]	u	
+[ SPEAKING SPANISH ]	f	
+[ HEART RATE INCREASES ]	a	
+[ Charlie ]	s	
+[ Thinking ]	o	
+[[GRAB]	o	
+[ LAUGHING ]	p	
+[BOP!]	a	
+[ DOORBELL RINGS ]	a	
+[Siri]	s	
+[ Male Annouer ]	s	Male Announcer
+[ giggles ]	p	
+[ all ]	s	
+[ le Announcer ]	s	Male Announcer
+[ grunts ]	p	
+[ Male Announc ]	s	Male Announcer
+[ Laughing ]	p	
+[BUZZER]	a	
+[ applause ]	p	
+[ Male Aouncer ]	s	Male Announcer
+[ Ma Announcer ]	s	Male Announcer
+[ snoring ]	p	
+[ Male Annncer ]	s	Male Announcer
+[MUSIC PLAYING]	m	
+[Announcer:]	s	Announcer
+[ BEEP ]	a	
+[ SCREAMS ]	p	
+[ Under his breath ]	q	
+[ whispering ]	q	
+[ ding! ]	a	
+[ crowd cheering ]	p	
+[ CRYING ]	p	
+[ cheering ]	p	
+[ bop ]	a	
+[WOMAN]	s	
+[ INHALES DEEPLY ]	p	
+[translated]	o	
+[ Driver ]	s	
+[ BARKS ]	a	
+[ cheers and applause ]	p	
+[[VO]	u	
+[ INDISCERNIBLE ]	a	
+[Woman]	s	
+[ both ]	s	
+[ grunting ]	p	
+[ birds chirping ]	a	
+[excited yelling]	p	
+[ Male Annocer ]	s	Male Announcer
+[ Phil ]	s	
+[ horn honks ]	a	
+[ DRUM ROLL ]	m	
+[ CHANTING ]	l	
+[ whirring ]	a	
+[ Mike ]	s	
+[GUNFIRE]	a	
+[ Wife ]	s	
+[ CHICKEN CAWS ]	a	
+[ beeping ]	a	
+[MUSIC PLAYS]	m	
+[ Grandma ]	s	
+[applause]	p	
+[ slap! ]	a	
+[ Male Announr ]	s	Male Announcer
+[ Phillips' Lady ]	s	
+[ MalAnnouncer ]	s	Male Announcer
+[ TAPPING ]	a	
+[ AUDIENCE AWs ]	p	
+[ Me Announcer ]	s	Male Announcer
+[ Laughs ]	p	
+[ Monica ]	s	
+[ CHEERING AND APPLAUSE ]	p	
+[INAUDIBLE CONVERSATIONS]	a	
+[snoring.]	p	snoring
+[CROWD CHEERING]	p	
+[ Nurse ]	s	
+[ telephone rings ]	a	
+[ Mr. Bluelight ]	s	
+[laughing]	p	
+[ WHISTLE BLOWING ]	a	
+[ MUSIC PLAYING ]	m	
+[ BASKETBALL BOUNCING ]	a	
+[ Male Anuncer ]	s	Male Announcer
+[SPEAKING SPANISH]	f	
+[ M'M... ]	p	
+[SINGING]	l	
+[ BELL DINGING ]	a	
+[ Male nouncer ]	s	Male Announcer
+[Guy]	s	
+[ Kyle ]	s	
+[PHONE RINGING]	a	
+[ beep ]	a	
+[ TELEPHONE RINGS ]	a	
+[ Susan ]	s	
+[ GUNSHOTS ]	a	
+[ Male Announce]	s	Male Announcer
+[ children laughing ]	p	
+[ SIRENS ]	a	
+[ SPEAKING IN FOREIGN LANGUAGE ]	f	
+[ BOP ]	a	
+[ Narrator ]	s	
+[ Julie ]	s	
+[ glass shatters ]	a	
+[NO AUDIO]	a	
+[ crunch ]	a	
+[Kevin]	s	
+[ AUDIENCE OOHs ]	p	
+[ Shapiro ]	s	
+[ inhales deeply ]	p	
+[ Duck ]	s	
+[ CROWD CHEERING ]	p	
+[ BELL RINGS ]	a	
+[Laughs]	p	
+[ SHOUTING ]	p	
+[[PKG]	u	
+[ Marge ]	s	
+[ crows ]	a	
+[WHISPERING]	q	
+[inaudible]	a	
+[ CLEARS THROAT ]	p	
+[ John ]	s	
+[ COUGHS ]	p	
+[ indistinct conversations ]	a	
+[ Normal voice ]	a	
+[Burke]	s	
+[ Woman #2 ]	s	
+[ Brian ]	s	
+[ Agent Smith ]	s	
+[ Man #2 ]	s	
+[ Dennis' voice ]	s	
+[ passenger ]	s	
+[ROCK MUSIC PLAYS]	m	
+[Prof. Burke]	s	
+[ SINGING ]	l	
+[ BOTH LAUGH ]	s	
+[ breathes deeply ]	p	
+[ clears his throat ]	p	
+[ EXPLOSION ]	a	
+[ female voice ]	s	
+[ sizzling ]	a	
+[ HORN HONKS ]	a	
+[ ROARS ]	a	
+[ Rattling ]	a	
+[crowd cheering]	p	
+[ whip cracks ]	a	
+[ softly ]	q	
+[ doorbell rings ]	a	
+[ OVERLAPPING SPEAKERS ]	a	
+[SPEAKING FOREIGN LANGUAGE]	f	
+[ mom ]	s	
+[ Kate ]	s	
+[Mom]	s	
+[buzzer]	a	
+[ Chuckling ]	p	
+[ sneezing ]	p	
+[bleep]	a	
+[ Dance music plays ]	m	
+[ Male announcer ]	s	
+[Bell rings]	a	
+[ SNIFFLES ]	p	
+[ Male Announcer]	s	
+[ indistinct shouting ]	a	
+[knock on door]	a	
+[ Son ]	s	
+[ Bjorn ]	s	
+[Cheering and applause]	p	
+[ ALERT RINGS ]	a	
+[ SPORTSCASTER TALKING ON TV ]	s	
+[ BELL RINGING ]	a	
+[ whistle blows ]	a	
+[ horse neighs ]	a	
+[ Laughter ]	p	
+[Boy]	s	
+[ BABY CRYING ]	p	
+[ crickets chirping ]	a	
+[CHUCKLES]	p	
+[ Jennifer ]	s	
+[ Kids ]	s	
+[ telephone ringing ]	a	
+[BELL]	a	
+[ BELL DINGS ]	a	
+[ engine turns over ]	a	
+[ Bob ]	s	
+[ High-pitched ]	a	
+[CRYING]	p	
+[ GROANS ]	p	
+[ groans ]	p	
+[ Jennifer Garner ]	s	
+[ Junior ]	s	
+[ RV Guy ]	s	
+[ Spa Lady ]	s	
+[ COUGHS, SNEEZES ]	p	
+[ Technician ]	s	
+[ Aniston ]	s	
+[music]	m	
+[ Roger ]	s	
+[ clang ]	a	
+[ both laugh ]	s	
+[ bell dings ]	a	
+[ BIRDS SQUAWKING ]	a	
+[ angry gibberish ]	p	
+[ YELLING ]	p	
+[ Kim ]	s	
+[ wind howling ]	a	
+[CHEERING AND APPLAUDING]	p	
+[ Daughter ]	s	
+[ UNINTELLIGIBLE ]	a	
+[rDNA origin]	i	
+[ CHAINSAW BUZZING ]	a	
+[ HUMMING ]	a	
+[ SPEAKING IN SPANISH ]	f	
+[ Anouncer ]	s	
+[JACKHAMMER NOISE]	a	
+[INAUDIBLE QUESTION]	a	
+[ girls laughing ]	p	
+[ Santa ]	s	
+[ Rodger ]	s	
+[engine revving]	a	
+[ DOG BARKS ]	a	
+[ SAD TUBA ]	m	
+[Richard]	s	
+[ Manager ]	s	
+[SCREAMS]	p	
+[Chuckles]	p	
+[ sigh of relief ]	p	
+[Bell ring]	a	
+[ deep breath ]	p	
+[ Sally ]	s	
+[Cat Meows]	s	
+[Off screen]	o	
+[ gong ]	a	
+[Chris]	s	
+[frustrated clicking]	a	
+[ girl ]	s	
+[ TIRES SQUEAL ]	a	
+[ elevator bell dings ]	a	
+[CHEERS AND APPLAUSE ]	p	
+[giggling]	p	
+[ale Announcer ]	s	Male Announcer
+[cheering]	p	
+[ Lane ]	s	
+[ Artis Brown ]	s	
+[ dog barking ]	a	
+[ baby crying ]	p	
+[ Applause ]	p	
+[phone rings]	a	
+[ dad snoring ]	p	
+[ Shirley ]	s	
+[ CAR ALARM CHIRPS ]	a	
+[ humming ]	p	
+[ Mucus ]	s	
+[ GIGGLING ]	p	
+[ Hans ]	s	
+[Old English accent]	a	
+[ Woman Announcing ]	s	
+[BARKING]	a	
+[coughing]	p	
+[ Man #1 ]	s	
+[ Gasps ]	p	
+[ Woman #1 ]	s	
+[ Kevin ]	s	
+[Female Announcer]	s	
+[ CRASHING ]	a	
+[ Femalennouncer ]	s	Female Announcer
+[ ENGINE REVS ]	a	
+[ WHISTLES ]	p	
+[PHONE RINGS]	a	
+[ Barbara Boxer ]	s	
+[Ted]	s	
+[ MUTED ]	a	
+[ beatboxing ]	a	
+[BEEPING]	a	
+[SIRENS]	a	
+[ Robert ]	s	
+[ honk! ]	a	
+[ ghosts moaning ]	p	
+[ SHIP HORN BLOWS ]	a	
+[ GRUNTS ]	p	
+[ coyote howls ]	a	
+[ male Announcer ]	s	
+[ coughing ]	p	
+[...]	o	
+[ Ryan ]	s	
+[ horns honking ]	a	
+[ GUNSHOT ]	a	
+[ horn honking ]	a	
+[ Woman #3 ]	s	
+[ AUDIENCE BOOS ]	p	
+[ COUGHING ]	p	
+[ SPLAT ]	a	
+[sniffs]	p	
+[ babies crying ]	p	
+[BOTH]	s	
+[ whistle ]	p	
+[chuckles]	p	
+[Son]	s	
+[ Terri ]	s	
+[Paul]	s	
+[Tom]	s	
+[ ale Announcer ]	s	Male Announcer
+[ SNIFFLES, COUGHS ]	p	
+[whispers]	p	
+[Laughter]	p	
+[ whispers ]	q	
+[ Fele Announcer ]	s	Female Announcer
+[sighs]	p	
+[ RUSTLING ]	a	
+[ INHALES, EXHALES ]	p	
+[ BOOING ]	p	
+[ Advisor 1 ]	s	
+[ Sniffs ]	p	
+[ SPARKLE ]	o	
+[ Coughing Continues ]	p	
+[ Derek ]	s	
+[ DING! ]	a	
+[ SCHOOL BELL RINGS ]	a	
+[ SNEEZES, COUGHS ]	p	
+[ Rooster Crow ]	a	
+[ screaming ]	p	
+[ auto-tuned ]	o	
+[ kids cheering ]	p	
+[?...]	i	
+[ Barking ]	a	
+[ whistling ]	p	
+[ Sighs ]	p	
+[ Alex ]	s	
+[ Chef ]	s	
+[ static warbles ]	a	
+[ Voice of Dennis ]	s	
+[OVERLAPPING DIALOGUE]	a	
+[MAN]	s	
+[ GRUNTING ]	p	
+[ ]	i	
+[ Sassily ]	q	
+[ Duck yelling ]	a	
+[Music]	m	
+[ As a cowboy ]	a	
+[ As a southern belle ]	a	
+[school bell rings]	a	
+[ LAUGHTER AND OHs ]	p	
+[ THUMP ]	a	
+[[TEASE]	q	
+[Vet]	s	
+[ ping! ]	a	
+[ water crashing ]	a	
+[Applause]	p	
+[ Japanese accent ]	a	
+[ Peggy ]	s	
+[ yawning sound ]	a	
+[ WHOOSH ]	a	
+[ Boxer ]	s	
+[ CHAINSAW WHIRRING ]	a	
+[ sniffing ]	p	
+[ Female Annncer ]	s	Female Announcer
+[ whistles ]	p	
+[ Sarah ]	s	
+[ Giggling ]	p	
+[ SPEAKING FRENCH ]	f	
+[EXPLOSION]	a	
+[ bat cracks ]	a	
+[ SNEEZES ]	p	
+[ STARTING GUN GOES OFF ]	a	
+[screeching]	a	
+[ Starter ]	s	
+[SIGHS]	p	
+[ clears throat ]	p	
+[ Jay ]	s	
+[ Female Annouer ]	s	Female Announcer
+[SQUEAKING]	a	
+[ PHONE RINGING ]	a	
+[ Men ]	s	
+[ NO AUDIO ]	a	
+[Father]	s	
+[ Female Aouncer ]	s	Female Announcer
+[Decision Guide]	s	
+[ HORN HONKING ]	a	
+[BELL RINGING]	a	
+[ crowd cheering, mouse clicks ]	a	
+[ exhales ]	p	
+[ growls ]	p	
+[ snfs ]	p	sniffs
+[YELLING]	p	
+[ barks ]	a	
+[Bassist]	s	
+[Niece]	s	
+[ BUZZING ]	a	
+[ Coach ]	s	
+[Uncle]	s	
+[ basketball bouncing ]	a	
+[ SILENCE ]	a	
+[ DANCE MUSIC PLAYING ]	m	
+[ Snapping ]	a	
+[ cat meows ]	a	
+[ CHILDREN LAUGHING ]	p	
+[ Michelle ]	s	
+[ On P.A. ]	a	
+[Woodworker]	s	
+[WHIP CRACK]	a	
+[Male Announcer]	s	
+[ crunch! ]	a	
+[ ENGINE REVVING ]	a	
+[ slap! slap! slap! slap! ]	a	
+[PANTING]	a	
+[ brakes hiss ]	a	
+[ exhales deeply ]	p	
+[ ANGELIC MUSIC PLAYS ]	m	
+[ High male ]	s	
+[ Woman 2 ]	s	
+[ SNORING ]	p	
+[ Pop ]	a	
+[ Low male ]	s	
+[ Radio DJ ]	s	
+[ screams ]	p	
+[ Grandpa ]	s	
+[ inhales ]	p	
+[ buzzer ]	a	
+[SCRAPING]	a	
+[DOORBELL RINGS]	a	
+[ Lee ]	s	
+[ J. Weissman ]	s	
+[dog bark]	a	
+[]	i	
+[ Jackie ]	s	
+[ Woman on TV ]	s	
+[ ALL SPEAK AT ONCE ]	a	
+[ Barista ]	s	
+[ all screaming ]	p	
+[ HOOF BEATS ]	a	
+[[Voiceover]	s	
+[¶...]	i	
+[ MUSIC STOPS ]	m	
+[ Lisa ]	s	
+[ â™ª MUSIC â™ª ]	m	
+[ cow moos ]	a	
+[ Female Announc ]	s	Female Announcer
+[ Mom #1 ]	s	
+[SIRI:]	s	
+[ Mom #2 ]	s	
+[ boom! ]	a	
+[ whistle blowing ]	a	
+[ Snickers ]	p	
+[Dad]	s	
+[ WHIP CRACKS ]	a	
+[BLEEPED]	a	
+[ NyQuil Bottle ]	s	
+[ BARKING ]	a	
+[ Candidate ]	s	
+[Robot]	s	
+[o/~ ...]	m	
+[ Female announcer ]	s	Female Announcer
+[ Berman ]	s	
+[ Tom ]	s	
+[Brad]	s	
+[ Wisest Kid ]	s	
+[ Carl ]	s	
+[ Boris ]	s	
+[ slurps ]	p	
+[ Chuckles ]	p	
+[ Rob ]	s	
+[ Man 2 ]	s	
+[ ALL TALKING AT ONCE ]	a	
+[ Male voice ]	s	
+[ both screaming ]	s	
+[Clicks mouse]	a	
+[ Jane ]	s	
+[ Teen ]	s	
+[SPEAKING IN SPANISH]	f	
+[WHISTLING]	p	
+[ CELLPHONE BEEPS ]	a	
+[ Fema Announcer ]	s	Female Announcer
+[ bell rings ]	a	
+[ Mini ]	s	
+[ Pilot ]	s	
+[ Scott ]	s	
+[ BOTH SIGH ]	p	
+[singing]	l	
+[ CAT MEOWS ]	a	
+[ Kyle with voice of Dennis ]	s	
+[Plumber]	s	
+[ Claira ]	s	
+[ DISCO PLAYING ]	a	
+[ coos ]	a	
+[Male VO]	s	
+[CROWD BOOING]	p	
+[Sigh]	p	
+[ music plays, record skips ]	m	
+[thunder and rain]	a	
+[ Kelly ]	s	
+[ Designer ]	s	
+[ Shouting ]	p	
+[SPEAKINGITALIAN]	f	
+[ WHISPERING ]	q	
+[ crunching, sipping ]	p	
+[ Cherry ]	s	
+[CAR HORN HONKS]	a	
+[ BOOS ]	p	
+[Bell Rings]	a	
+[Poof!]	a	
+[ GONG ]	a	
+[ Together ]	s	
+[FEMALE ANNOUNCER]	s	
+[ Director ]	s	
+[ KITT ]	s	
+[ WHISTLE ]	p	
+[â™ª...]	m	
+[ALARM BLASTING]	a	
+[touch tone]	a	
+[WHISTLE]	a	
+[ BABIES CRYING ]	p	
+[ pop! ]	a	
+[ record scratch ]	a	
+[orchestral music]	m	
+[ Robin ]	s	
+[ Whispers ]	q	
+[Evie]	s	
+[CELL PHONE RINGS]	a	
+[ Superfan ]	s	
+[fight bell: ding, ding]	a	
+[ COYOTE HOWLS ]	a	
+[ Green Giant ]	s	
+[ GHOSTS MOANING ]	p	
+[Goat]	s	
+[ transforming sounds ]	a	
+[ Coughing ]	p	
+[ upbeat music ]	m	
+[ normal voice ]	a	
+[ Spokesperson ]	s	
+[ CHUCKLE ]	p	
+[ Beep ]	a	
+[ BAND PLAYING ]	m	
+[ SPEAKING A FOREIGN LANGUAGE ]	f	
+[ SHUTTER CLICKS ]	a	
+[ Guys ]	s	
+[ thinking ]	o	
+[ Birds Chirping ]	a	
+[SCORE ALERT TEXT SOUND]	a	
+[Beekeeper]	s	
+[ BUZZER SOUNDS ]	a	
+[ Baseball bat cracks ]	a	
+[WHOOMP!]	a	
+[ brays ]	a	
+[Baby crying]	p	
+[dramatic music]	m	
+[ DOG BARKING ]	a	
+[ slurp!!! ]	a	
+[ SIREN ]	a	
+[Ewh!]	a	
+[ Cat ]	s	
+[ CLAPPING ]	p	
+[ WHISTLING ]	p	
+[ thunder crashes ]	a	
+[ Sniffing ]	p	
+[APPLAUDING]	p	
+[ BEEPING, WHIRRING ]	a	
+[ Phone Ringing ]	a	
+[ SOBBING ]	p	
+[ Rat Squeaking ]	a	
+[ Jen Garner ]	s	
+[tires screeching]	a	
+[ Inhales, Exhales ]	p	
+[scanner beep]	a	
+[ Laura ]	s	
+[ beeps ]	a	
+[ Cheering ]	p	
+[ Spokesman ]	s	
+[ GROWLING ]	a	
+[ SFX: POOF ]	a	
+[GASPS]	p	
+[Squeals]	a	
+[ camera shutter clicks ]	a	
+[ YODELING PLAYS ]	m	
+[ GUSTAV SQUAWKS ]	a	
+[ "I'M ONLY HUMAN" PLAYS ]	l	
+[ Ross ]	s	
+[ thlurp! ]	p	
+[ quack ]	a	
+[ â™ª ]	m	
+[ Seagulls Squawking ]	a	
+[Jerry Bell III]	s	
+[BARKS]	a	
+[ Bridesmaid ]	s	
+[ smack! ]	a	
+[PEOPLE CHATTING]	a	
+[thunder booms]	a	
+[ SCREAMS AND APPLAUSE ]	p	
+[ pigeons ]	a	
+[Car alarm blaring]	a	
+[ WIND HOWLING ]	a	
+[ Carmel ]	s	
+[ malennouer ]	s	male announcer
+[ Siri ]	s	
+[ CELLPHONE RINGS ]	a	
+[ children shouting ]	p	
+[ SIGH ]	p	
+[DING]	a	
+[ rattling ]	a	
+[male announcer]	s	
+[ Zach ]	s	
+[ Man thinking ]	o	
+[ waves crashing ]	a	
+[ SFX: RIBBIT ]	a	
+[[IN VIS]	o	
+[ KNOCKING ]	a	
+[MICHAEL]	s	
+[ Hero ]	s	
+[ TECHNICAL DIFFICULTIES ]	o	
+[ GIGGLES ]	p	
+["MELT WITH YOU" PLAYING]	l	
+[ FemalAnnouncer ]	s	Female Announcer
+[ Women ]	s	
+[Whistle]	a	
+[ SPEAKING JAPANESE ]	f	
+[ HORN HONKS MELODY ]	m	
+[THINKING]	o	
+[ clock ticking ]	a	
+[Beep]	a	
+[ BREATH OF RELIEF ]	p	
+[ dogs barking ]	a	
+[ ALARM RINGS ]	a	
+[MUSIC STOPS]	m	
+[ Whispering ]	q	
+[BOOING]	a	
+[ TAPPING, CASH REGISTER DINGS ]	a	
+[ CAMERA SHUTTER CLICKS ]	a	
+[ MUMBLING ]	p	
+[screaming]	p	
+[KNOCKING]	a	
+[EVERYONE TALKING AT ONCE]	a	
+[LIGHT STRING MUSIC]	m	
+[MAN GRUNTS]	p	
+[ Morgan ]	s	
+[ Rosa ]	s	
+[boxes falling]	a	
+[ LAUGHING NERVOUSLY ]	p	
+[ Man Announcing ]	s	
+[ CRASH! ]	a	
+[ Doug ]	s	
+[ Cheryl ]	s	
+[CHORUS SINGINGS:]	l	
+[ SINGING IN SPANISH ]	f	
+[ BABY FUSSING ]	p	
+[ Megan ]	s	
+[Knock]	a	
+[ Dietitian ]	s	
+[ PICKLES WHINES ]	a	
+[ Family ]	s	
+[ roars ]	a	
+[THUNDER]	a	
+[INDISTINCT]	a	
+[ CLICK ]	a	
+[ Stewart ]	s	
+[SPLASH!]	a	
+[ Doorbell ]	a	
+[ Gigi ]	s	
+[APPLAUSE AND CHEERING]	p	
+[GIGGLES]	p	
+[ engines revving ]	a	
+[eerie music]	m	
+[ sheep bleats ]	a	
+[ Footsteps ]	a	
+[ Woman #5 ]	s	
+[ Tylenol Bottle ]	s	
+[ scoffs ]	p	
+[ Forward Collision Warning ]	a	
+[ cellphone beeps ]	a	
+[ Woman #4 ]	s	
+[ Woman 3 ]	s	
+[ ALL GASP ]	p	
+[ Corrine ]	s	
+[ Gordon ]	s	
+[ Vrrroooooomm! ]	a	
+[ Experimenter 1 ]	s	
+[HORNS HONKING]	a	
+[ Bank Associate ]	s	
+[SPEAKING IN NATIVE TONGUE]	f	
+[AUDIENCE REACTS]	p	
+[ Kristy ]	s	
+[ Rand ]	s	
+[container door closing]	a	
+[Cheering]	p	
+[WHISTLES]	p	
+[Gasp]	p	
+[ Jim ]	s	
+[ snores ]	p	
+["KNOCK ON WOOD" PLAYING]	l	
+[sci-fi tractor beam sound]	a	
+[Jess]	s	
+[ Woman 1 ]	s	
+[ Karen ]	s	
+[ PANTING ]	p	
+[ train whistle blows ]	a	
+[APPLAUSE AND CHEERS]	p	
+[ Upbeat Instrumental ]	m	
+[ scanning ]	u	
+[ KIDS CHANTING "FLO!" ]	l	
+[SIREN]	a	
+[roars]	a	
+[CLUCKING]	a	
+[ Hypnotist ]	s	
+[ Crickets Chirping ]	a	
+[ Baby Coos ]	p	
+[container door opening]	a	
+[ Commentator ]	s	
+[Voice echoing]	a	
+[Doorbell]	a	
+[ Facilitator ]	s	
+[ squeaking ]	a	
+[ Morty ]	s	
+[ Drew ]	s	
+[gasps]	p	
+[ creaking ]	a	
+[ mixer whirring ]	a	
+[ SIRENS WAILING ]	a	
+[ music ]	m	
+[ electricity crackling ]	a	
+[ R&B SLOW JAM PLAYING ]	m	
+[WHOOSH, CLANG]	a	
+[ Greg ]	s	
+[ Ellen ]	s	
+[ AUDIENCE BOOs ]	p	
+[ Huntsman ]	s	
+[ SPEAKING IN RUSSIAN ]	f	
+[ Delavane ]	s	
+[TALKING OVER EACH OTHER]	a	
+[ Sniff ]	p	
+[ Courier ]	s	
+[ toy robot sounds ]	a	
+[ club scene music ]	m	
+[SPORTSCASTER VO]	s	
+[ AUDIENCE GASPS ]	p	
+[ sniffles ]	p	
+[ crying ]	p	
+[ buzzing ]	a	
+[CHEERS & APPLAUSE]	p	
+[ mosquitoes buzzing ]	a	
+[ Afi ]	s	
+[ Foreman ]	s	
+[[V/O]	s	
+[ Goodall ]	s	
+[People clap and cheer]	p	
+[ slap! slap! slap! ]	a	
+[ DRUMROLL ]	m	
+[ Guy ]	s	
+[ WHIRRING AND BEEPING ]	a	
+[ Ernie ]	s	
+[ Yelling ]	p	
+[Mom screams]	p	
+[ Cortana ]	s	
+[Sighs]	p	
+[ record scratches ]	a	
+[ IMITATES ROBOT ]	a	
+[ Clears Throat ]	p	
+[ Sports announcer ]	s	
+[ friends ]	s	
+[ Donovan ]	s	
+[ Mainframe ]	s	
+[ all gasp ]	s	
+[Music playing]	m	
+[ BIRD CHIRPING ]	a	
+[ Female Announr ]	s	Female Announcer
+[ DOOR CLOSES ]	a	
+[HUMMING]	p	
+[ METAL CLANKS ]	a	
+[ yawns ]	p	
+[ brother ]	s	
+[ Motorcycle Engine Growl ]	a	
+[ click ]	a	
+[Ricky]	s	
+[ meow ]	a	
+[ GEARS WHIRRING ]	a	
+[ zapping ]	a	
+[ lighter flicking ]	o	
+[Crash!]	a	
+[engines revving]	a	
+[ Italian accent ]	a	
+[SOBBING]	p	
+[barks]	a	
+[Person]	s	
+[COUGHS]	p	
+[ â™ª THEME MUSIC â™ª ]	m	
+[GIGGLING]	p	
+[ Engineer laughs ]	p	
+[ Husband ]	s	
+[MALE NARRATOR]	s	
+[ Garner ]	s	
+[ WHIMPERS ]	p	
+[muffled]	a	
+[ Kareem ]	s	
+[ RATTLING ]	a	
+[ BOYS SCREAMING ]	p	
+[giggles]	p	
+[singing to himself]	l	
+[ Traffic Passing ]	o	
+[ SCANNER WARBLING ]	a	
+[Dog]	s	
+[ Girls ]	s	
+[boys screaming]	p	
+[ THUD ]	a	
+[High-pitched]	a	
+[ thunk ]	a	
+[HOUSE BAND PLAYING]	m	
+[MOUSE CLICK]	a	
+[ Congregation Applauding ]	p	
+[ gasping ]	p	
+[ Gorilla ]	s	
+[ Rinsing ]	a	
+[woman]	s	
+[ INHALES ]	p	
+[ Moderator ]	s	
+[ SCANNER BEEPING ]	a	
+[ Abbey ]	s	
+[whirring drones]	a	
+[ Jake ]	s	
+[ Fele Aounc ]	s	Female Announcer
+[Rob]	s	
+[ Jon ]	s	
+[ CACKLING ]	p	
+[DOOR OPENS]	a	
+[ crunches ]	a	
+[ WHISTLE BLOWS ]	a	
+[Jelly Animal]	s	
+[ William ]	s	
+[nervous giggle]	p	
+[coughs]	p	
+[ VEHICLE BEEPING ]	a	
+[crash sound]	a	
+[ insects chirping ]	a	
+[ Herbie ]	s	
+[bagpipe music]	m	
+[ Employees ]	s	
+[sfx]	a	
+[ BELLS RING ON SIGN ]	a	
+[ smack! smack! smack! ]	a	
+[ crash ]	a	
+[ Loudspeaker ]	a	
+[ SINGING IN FOREIGN LANGUAGE ]	f	
+[CHUCKLING]	p	
+[prospector]	s	
+[ Cough, Sniffle ]	p	
+[car revving]	a	
+[Birds chirping]	a	
+[ Sea ]	s	
+[ SNIFFS ]	p	
+[ stomach growls ]	a	
+[ Whimper ]	p	
+[Passenger]	s	
+[ growling ]	p	
+[GROANING]	p	
+[ UGHTER ]	p	Laughter
+[ Brent ]	s	
+[ car braking ]	a	
+[ Friend ]	s	
+[ barking ]	a	
+[ GUN BEEPS ]	a	
+[ tires squeal ]	a	
+[ Mother ]	s	
+[grunting]	p	
+[ Engager ]	a	
+[ Mortazavi ]	s	
+[ PHONE RINGS ]	s	
+[ Dan ]	a	
+[ deep breath]	p	
+[ BELL ]	a	
+[GRUNTING]	p	
+[ FLO CHUCKLES ]	p	
+[crash]	a	
+[ Feme Announcer ]	s	Female Announcer
+[ Southern accent ]	a	
+[ Tiffany ]	s	
+[UPBEAT MUSIC]	m	
+[end-of-period horn blows]	a	
+[ Diane Lane ]	s	
+[BIRDS CHIRPING]	a	
+[ alarm buzzes ]	a	
+[ meows ]	s	
+[ AUDIO DIFFICULTIES ]	o	
+[ Female Announce]	s	Female Announcer
+[ SPEAKING ITALIAN ]	f	
+[ Mrs. Hutchison ]	s	
+[PIANO KEYS BANGING]	m	
+[Alex]	s	
+[ babbling ]	p	
+[ DRIVER PANTING ]	p	
+[ printer whirs ]	a	
+[ yelps ]	a	
+[ cellphone vibrates ]	a	
+[Clears Throat]	p	
+[ AMBIENT STREET NOISE ]	a	
+[ le Aounc ]	s	Announcer
+[ Amy ]	s	
+[ Elizabeth ]	s	
+[[BUMPER]	o	
+[BABY CRYING]	p	
+[ EXPLETIVE ]	a	
+[ Jeff ]	s	
+[ cheering, cellphone beeps ]	a	
+[ knock on door ]	a	
+[ Chris ]	s	
+[ CRASH ]	a	
+[SNORING]	p	
+[ Asst Mgr ]	s	
+[cars honking]	a	
+[ Russian accent ]	a	
+[ pen scratches ]	a	
+[ Slow, deep voice ]	a	
+[ GRUNTS SOFTLY ]	p	
+[ school bell rings ]	a	
+[ bark ]	a	
+[yodeling]	m	
+[ Visigoths cheer ]	p	
+[ Alec ]	s	
+[ electricity zaps ]	a	
+[rDNa origin]	i	
+[ LAUGER ]	p	Laughter
+[ Buzz ]	a	
+[ Whimpers ]	p	
+[BOOS]	p	
+[suspenseful music]	m	
+[ Earl ]	s	
+[ Command Center ]	s	
+[ SIREN WAILING ]	a	
+[ LAHTER ]	p	Laughter
+[ Female nouncer ]	s	Female Announcer
+[ BLOWS WHISTLE ]	a	
+[ Ashley ]	s	
+[ Jocelyn ]	s	
+[ RING ]	a	
+[ Female Anuncer ]	s	Female Announcer
+[ Intercom ]	s	
+[BALLAD RINGTONE PLAYING]	m	
+[ POWERS DOWN ]	a	
+[ BABBLES ]	p	
+[BELL TOLLING]	a	
+[HONKING]	a	
+[ buzz! ]	a	
+[ Boy 1 ]	s	
+[ Judy ]	s	
+[TURNS OFF RADIO]	a	
+[ Molly ]	s	
+[ internal ]	a	
+[ Maine accent ]	a	
+[ TIRES SCREECHING ]	a	
+[ Western accent ]	a	
+[ Crowd ]	s	
+[ Bottle Two ]	s	
+[ Midwestern/Chicago accent ]	a	
+[ Brooklyn accent ]	a	
+[ Animals Calling ]	a	
+[ SPLASH! ]	a	
+[ANNOUNCER:]	s	Announcer
+[ Female Annocer ]	s	Female Announcer
+[ manager 2 ]	s	
+[ Male ]	s	
+[ voices in background ]	a	
+[playful orchestral music]	m	
+[ loud party sounds ]	a	
+[ glasses clink ]	a	
+[ Bubbles ]	s	
+[ breathes deeply, wind blows ]	p	
+[ slamming ]	a	
+[ding]	a	
+[GUNSHOTS]	a	
+[HEART BEAT]	a	
+[ Cheri ]	s	
+[ Sandy ]	s	
+[ LAUGHT ]	p	Laughter
+[Instructor]	s	
+[ Child ]	s	
+[ Farrell ]	s	
+[ wings flapping ]	a	
+[ British accent ]	a	
+[ boy laughs ]	p	
+[ Cindy ]	s	
+[ Puppy ]	s	
+[ Interviewer ]	s	
+[safety beeping]	a	
+[ GROWLS ]	p	
+[ FEEDBACK ]	a	
+[changes channel]	a	
+[ BIRDS CHIRPING ]	a	
+[ BUZZ ]	a	
+[ Girl 2 ]	s	
+[ buzzer sounds ]	a	
+[WOMAN SCREAMS]	p	
+[ â™ª Heroic Music â™ª ]	m	
+[SPEAKING CANTONESE]	f	
+[ KNOCK ON DOOR ]	a	
+[ Katie ]	s	
+[BOP! BOP!]	a	
+[ Penélope Cruz ]	s	
+[ Whitman ]	s	
+[ TELEPHONE RINGING ]	a	
+[ Elevator Bell Dings ]	a	
+[ Gnome ]	s	
+[ sniffling ]	p	
+[Ho, Ho, Ho, Ho]	l	
+[ BREATHING DEEPLY ]	p	
+[ S. Greenlee ]	s	
+[Fuzz Pile]	s	
+[SNIFFS]	p	
+[ Teeth Click ]	a	
+[Gasps]	a	
+[ Fale Announcer ]	s	Female Announcer
+[ snow intensifies ]	o	
+[ Dog Barks ]	a	
+[CLOSING BELL RINGING]	a	
+[Popping & fizzing sounds]	a	
+[ monitor beeping ]	a	
+[ laugh ]	p	
+[romantic violin music]	m	
+[ BOTH HUMMING ]	p	
+[Breath of relief]	p	
+[screams]	p	
+[ SHOUTING IN JAPANESE ]	f	
+[Reddi Wip spray sound]	a	
+[Howling wind]	a	
+[breath of relief]	p	
+[ Air Traffic Controller ]	s	
+[doorbell rings]	a	
+[ Professor ]	s	
+[ Larry ]	s	
+[ car door closing ]	a	
+[ TOY MEOWS ]	a	
+[ Vacuum Whirring ]	a	
+[ INDISTINCT CONVERSATIONS ]	a	
+[ explosion ]	a	
+[ TALKING OVER ONE ANOTHER ]	a	
+[ SIGH OF RELIEF ]	p	
+[ toilet flushes ]	a	
+[meatball]	s	
+[ tires screeching ]	a	
+[engine revs]	a	
+[ static ]	a	
+[ MALE ANNOUNCER ]	s	
+[ timer dings ]	a	
+[ ENGINE REVS, TIRES SQUEAL ]	a	
+[phone ringing]	a	
+[ CRUNCHING ]	a	
+[ Girl's voice ]	s	
+[Student]	s	
+[ Kool-Aid Man ]	s	
+[ Engine Starts ]	a	
+[ pins fall ]	a	
+[Cricket sound]	a	
+[ n ]	u	
+[ video game sound effects ]	a	
+[ DINGS ]	a	
+[party noise]	a	
+[ cellphone vibrating ]	a	
+[DINNER BELL CHIMES]	a	
+[ THUNDER ]	a	
+[ Michael ]	s	
+[glass shattering]	a	
+[ camera clicks ]	a	
+[ Ilona ]	s	
+[ squawking ]	a	
+[ Worker ]	s	
+[ "LINUS AND LUCY" ]	l	
+[ Counselor ]	s	
+[ CELL PHONE RINGS ]	a	
+[SIZZLING]	a	
+[ snoring continues ]	p	
+[ Meg Whitman ]	s	
+[ wooosh ]	a	
+[ Oswald ]	s	
+[ Kristi ]	s	
+[ ting! ]	a	
+[grunts]	p	
+[whispering]	q	
+[Grocery bags dropping]	a	
+[ door opens, closes ]	a	
+[ Jamaul ]	s	
+[all coughing]	p	
+[ Water ]	s	
+[ Moos ]	a	
+[ Sneezes ]	p	
+[BOING]	a	
+[ ENGINE TURNS OVER ]	a	
+[Sizzling Sausage]	a	
+[ spits ]	a	
+[ speaking Spanish ]	f	
+[RING]	a	
+[door bell rings]	a	
+[CAPTIONER TRANSITION]	o	
+[ Sharon ]	s	
+[COUGHING]	p	
+[ rip ]	a	
+[car engine]	a	
+[Music Playing]	m	
+[ both laughing ]	p	
+[ Rooster Crowing ]	a	
+[ LOUD R&B ON CAR RADIO ]	a	
+[DRUM ROLL]	m	
+[ bleats ]	a	
+[ Ron ]	s	
+[ CHILDREN YELLING ]	p	
+[ light laugh ]	p	
+[ AS SCHWARZENEGGER ]	a	
+[ APPLE CRUNCHES ]	a	
+[Phone Rings]	a	
+[ man speaks Chinese ]	f	
+[ moaning ]	p	
+[ drums playing ]	m	
+[ Funny Voice ]	a	
+[ loud crash ]	a	
+[ Merv ]	s	
+[inhales]	p	
+[ Soldier ]	s	
+[ CELL PHONES BUZZ, CHIRP ]	a	
+[ TYPING CONTINUES ]	a	
+[rock music]	m	
+[DOG GROWLS]	a	
+[ Ruiz ]	s	
+[ DJ ]	s	
+[AUDIO NOT UNDERSTANDABLE]	a	
+[ poof! ]	a	
+[ Mirror ]	s	
+[DOORBELL]	a	
+[ Cashier ]	s	
+[SQUAWKS]	a	
+[BOOM!]	a	
+[ CRUNCH! ]	a	
+[crying]	p	
+[ Marcia ]	s	
+[AUDIENCE CHANTING "STEPHEN"]	l	
+[ Host ]	s	
+[ Female ]	s	
+[ RHYTHMIC CLAPPING ]	p	
+[ â™ª music plays ]	m	
+[ Dealer ]	s	
+[ bell dinging ]	a	
+[alarm beeps]	a	
+[ watch ticking ]	a	
+[ CELL PHONE TYPING ]	a	
+[sneezes]	p	
+[ SPEAKING RUSSIAN ]	f	
+[ Kid ]	s	
+[SIRENS WAILING]	a	
+[ Penelope ]	s	
+[ SPEAKING GIBBERISH ]	a	
+[Ricky whispers]	q	
+[ babbles ]	p	
+[ Forsythe ]	s	
+[ dog 2 ]	s	
+[ Penélope ]	s	
+[ all shouting ]	s	
+[ALARMS BLARING]	a	
+[ Researcher ]	s	
+[ Banker 1 ]	s	
+[ whirring and beeping ]	a	
+[ crisp crunches ]	a	
+[ SCOFFS ]	p	
+[ dog whimpers ]	a	
+[ ]	i	
+[dejectedly]	q	
+[ Security agent ]	s	
+[ cups clink ]	a	
+[ Bride ]	s	
+[brakes screech]	a	
+[OPENING BELL RINGING]	a	
+[inner voice]	a	
+[ ringing ]	a	
+[ moans ]	p	
+[ camera shutter clicking ]	a	
+[ CRICKETS CHIRPING ]	a	
+[BP]	a	
+[ Experimenter 2 ]	s	
+[ SFX: HORSE ]	a	
+[GRUNTS]	p	
+[groans]	p	
+[OVERLAPPING SPEAKERS]	a	
+[ son ]	s	
+[ Cherie ]	s	
+[ Beeping ]	a	
+[ Bottle One ]	s	
+[Uncle laughs]	p	
+[Uncle laughing]	p	
+[ SQUEALS ]	a	
+[ SPEAKING CHINESE ]	f	
+[ Brad ]	s	
+[ GROANING ]	p	
+[ Louise ]	s	
+[ Yawns ]	p	
+[ Younger brother ]	s	
+[ Deb ]	s	
+[MUSIC ]	m	
+[ light snort ]	p	
+[ steam hisses ]	a	
+[ Boy's voice ]	s	
+[ Sighs, Groans ]	p	
+[ cat purring ]	a	
+[SPEAKING FRENCH]	f	
+[ muttering ]	p	
+[TELEPHONE RINGS]	a	
+[phone stops ringing]	a	
+[TEEN TURNSON ROCK MUSIC]	m	
+[ Comic book expert ]	s	
+[ Dylan ]	s	
+[ alarm clock ringing ]	a	
+[ Chef Michael ]	s	
+[ GARAGE DOOR OPENING ]	a	
+[ Frank ]	s	
+[BABY CRIES]	p	
+[ AUDIENCE SHOUTING ]	p	
+[ Crowd Noise ]	a	
+[ EXPLOSIONS ]	a	
+[ punches ]	o	
+[INDISTINCT CHATTER]	a	
+[dog barks]	a	
+[ Bell Rings ]	a	
+[BAGPIPES PLAYING]	m	
+[ ? THEME MUSIC ? ]	m	
+[ tires squeal, engine revs ]	a	
+[ CELLPHONES BEEPING ]	a	
+[ Group ]	s	
+[ pencil scratches ]	a	
+[SIRENS WAIL]	a	
+[ SOUND OF GUNFIRE ]	a	
+[ Quinn ]	s	
+[CRASH]	a	
+[ LOCK CLICKS ]	a	
+[ Stella ]	s	
+[GROWL]	p	
+[ Computerized F]	s	
+[ horse whinnies ]	a	
+[ DOORBELL ]	a	
+[ Kimberly ]	s	
+[clears throat]	p	
+[GUNSHOT]	a	
+[ Ma]	s	
+[ AUDIENCE AWWS ]	p	
+[French accent]	a	
+[ Other Merv ]	s	
+[ construction sounds ]	a	
+[ CHEERS & APPLAUSE ]	p	
+[ Angela ]	s	
+[indistinct chatter]	a	
+[ Older brother ]	s	
+[ calling ]	a	
+[inhale + exhale mnemonic]	m	
+[ Salesman ]	s	
+[ Annie ]	s	
+[ High-pitched voice ]	a	
+[ CRACKING ]	a	
+[soft guitar music]	m	
+[ APAUSE ]	a	
+[ ALL CHEERING ]	p	
+[thinking]	o	
+[phones rings]	a	
+[ Carrie ]	s	
+[Echoing]	a	
+[ Short Staccato Snore ]	p	
+[ Whines ]	p	
+[ ribbits ]	a	
+[ bird chirps ]	a	
+[ INDISTINCT SHOUTING ]	a	
+[ Blows Nose ]	a	
+[ phone buzzes ]	a	
+[[TEASER]	o	
+[ FOGHORN BLOWS ]	a	
+[BONG]	a	
+[RINGING BELL]	a	
+[ Pepto Guy ]	s	
+[ Grocery Store PA ]	s	
+[ BOTH CHUCKLE ]	p	
+[gasp]	p	
+[ Anthony ]	s	
+[HOWLING]	p	
+[ chuckling ]	p	
+[ Roars ]	p	
+[ Nicole ]	s	
+[ ENGINE POWERS DOWN ]	a	
+[ Julian ]	s	
+[ POP ]	a	
+[FARTS]	a	
+[Man 1:]	s	
+[ Norma ]	s	
+[ROMNEY SINGING]	s	
+[President Obama]	s	
+[Lauren]	s	
+[upbeat music]	m	
+[Donna]	s	
+[ Johan ]	s	
+[ Quivery Upper Lip Snore ]	a	
+[pop]	a	
+[NAMES BEING READ]	o	
+[GASPING]	p	
+[ BELL TOLLING ]	a	
+[ FOOTSTEPS ]	a	
+[ Lorenzo ]	s	
+[ heart beats ]	a	
+[ TAPS BATON ]	a	
+[ Betsy ]	s	
+[ water pouring ]	a	
+[ Regina ]	s	
+[ Bloomfield ]	s	
+[sfx: dinosaur growl]	a	
+[ DRAMATIC SOUNDTRACK PLAYS ]	a	
+[ Mr. Mehta ]	s	
+[ CROWD BOOING ]	p	
+[ bird cries ]	a	
+[ Jaronda ]	s	
+[ SQUEAKING ]	a	
+[ Diehl ]	s	
+[ Bell Tolls ]	a	
+[ Woman in pet store ]	s	
+[ Bottle #2 ]	s	
+[ bump ]	a	
+[hold music playing]	m	
+[ glass tinkling ]	a	
+[ Maude ]	s	
+[ bells dinging ]	a	
+[ Stacy ]	s	
+[ Spray Bottle ]	s	
+[Bubble Wand]	s	
+[ APPLAU ]	p	Applause
+[ gnome ]	s	
+[ Gerry ]	s	
+[ slap! slap! ]	a	
+[[LIVE]	o	
+[ PLAUSE ]	a	Pause
+[ Music ]	m	
+[ SENTRA LOCK NOISE ]	a	
+[ glass breaks ]	a	
+[bong!]	a	
+[ freezing ]	o	
+[ car door shuts ]	a	
+[ Gertrude ]	s	
+[ child giggles ]	p	
+[Owner]	s	
+[ Gina ]	s	
+[ Lopez ]	s	
+[ominous music]	m	
+[Whispering]	q	
+[ Birds Squawking ]	a	
+[ POP MUZAK PLAYS ]	m	
+[ Spanish ]	f	
+[ Squeaking ]	a	
+[ ding dong ]	a	
+[music playing]	m	
+[ Gwen ]	s	
+[Daughter]	s	
+[ Receptionist ]	s	
+["STIR IT UP" PLAYING]	l	
+[ THUNDER RUMBLES ]	a	
+[COUGH, COUGH]	p	
+[CRUNCHING]	a	
+[ Splat, Splat, Splat ]	a	
+[ '80s dance music plays ]	m	
+[ engines rev ]	a	
+[ All kids ]	s	
+[ Stefan ]	s	
+[ pen clicks ]	a	
+[ CONAN GROWLS ]	a	
+[ o/~ ]	m	
+[ Pfffft! ]	a	
+[ goat bleats ]	a	
+[ Kenny ]	s	
+[ WHISPERS ]	q	
+[ VILLAGERS SCREAMING ]	p	
+[ SPEAKING IN FRENCH ]	f	
+[ SCATTERED BOOs ]	p	
+[ Tissue Box ]	s	
+[ Fiber Seeker ]	s	
+[ Boy 2 ]	s	
+[ Dentist ]	s	
+[ Show Announcer ]	s	
+[ seat humming ]	p	
+[ SCREAM ]	p	
+[ Dr. Banholzer ]	s	
+[ Corbett ]	s	
+[BEEPING SLOWLY STOPS]	a	
+[The Love Boattheme playing]	l	
+[CLAPPING]	p	
+[ shouting ]	p	
+[ cell phone rings ]	a	
+[ dog 1 ]	s	
+[ RINGING CONTINUES ]	a	
+[KNOCK ON DOOR]	a	
+[SFX: YETI NOISE]	a	
+[ Click, dial tone ]	a	
+[SPEAKING GERMAN]	f	
+[ garage door whirring ]	a	
+[ Ding ]	a	
+[ movie resumes ]	o	
+[ALL LAUGHING]	p	
+[ Carly ]	s	
+[ WetJet Spray ]	s	
+[ daughter ]	s	
+[DOG BARKING]	a	
+[TRAIN WHISTLE BLOWING]	a	
+[ DIAL TONE ]	a	
+[ all cheering ]	s	
+[ panting ]	p	
+[ Crowd Gasps ]	p	
+[ Virginia ]	s	
+[ movie plays ]	a	
+[ weights clanking ]	a	
+[ vacuum cleaner whirring ]	a	
+[ DOOR OPENS ]	a	
+[KCK OWOODPLAYG]	l	KNOCK ON WOOD PLAYING
+[APPLAUSE, CHEERING]	p	
+[ALARM BEEPS]	a	
+[ Mr. Donovan ]	s	
+[ SHOUTS ]	p	
+[ HORNS HONKING ]	a	
+[RINGING SLOWLY STOPS]	a	
+[shouting]	p	
+[ chanting ]	l	
+[ MINIONS GASP, CHUCKLE ]	p	
+[ ? MUSIC ? ]	m	
+[SNIFFING]	p	
+[ chomps ]	p	
+[ Little boy ]	s	
+[ Man on radio ]	s	
+[ sound fades ]	a	
+[ Rodger Riney ]	s	
+[ CLUCK, CLUCK ]	a	
+[ siren wailing ]	a	
+[BIRDS SQUAWKING]	a	
+[ Shrek ]	s	
+[Worker:]	s	
+[ bling! ]	a	
+[LAUTER]	a	Laughter
+[RHYTHMIC CLAPPING]	p	
+[people screaming]	p	
+[ gasp ]	p	
+[ Laurie ]	s	
+[ Woman Screaming ]	p	
+[ Giggles ]	p	
+[dramatic musical flourish]	m	
+[MUSICAL JINGLE]	m	
+[CROWD CHANTING STEPHEN]	l	
+[ Steve ]	s	
+[ howls ]	p	
+[ Crashing ]	a	
+[ Diana ]	s	
+[ Cat Meows ]	a	
+[ Chuckle ]	p	
+[ Italian ]	f	
+[phone buzzing]	a	
+[ clattering ]	a	
+[ Bettina ]	s	
+[ Cheers and applause ]	p	
+[ Sara ]	s	
+[ Growling ]	p	
+[ Jody ]	s	
+[ Male Announce ]	s	Male Announcer
+[ MUSIC PLAYS ]	m	
+[ "Dreams" by Beck ]	l	
+[ dog ]	s	
+[ Man]	s	
+[ BRITISH ACCENT ]	a	
+[ chirping ]	a	
+[ Blue Sponge ]	s	
+[sniffing]	p	
+[ Chester Cheetah ]	s	
+[Chelsea]	s	
+[ HOWLING ]	p	
+[ crowd gasps ]	p	
+[SPEAKING IN FOREIGN LANGUAGE]	f	
+[Butcher]	s	
+[Christi]	s	
+[Hero female]	s	
+[SFX: BELL]	a	
+[ Dr. Rahmany ]	s	
+[ kids ]	s	
+[ ALARM SOUNDS ]	a	
+[ COIN DROPS ]	a	
+[ Mr. Powell ]	s	
+[ APPLSE ]	p	Applause
+[ Announ]	s	Announcer
+[OLD]	a	Mimics old man
+[ thud ]	a	
+[ child's voice ]	s	
+[ Wayne ]	s	
+[ WHOOSHING ]	a	
+[ speaking French ]	f	
+[WAVES CRASHING]	a	
+[BELLS RINGING]	a	
+[ ZAP! ]	a	
+[ CO DRO ]	a	Coin drops
+[ NORMAL VOICE ]	a	
+[KNOCK ON WOODPLAYING]	a	
+[ Fele Annouer ]	s	Female Announcer
+[ all kids ]	s	
+[ Brother ]	s	
+[ crowd ]	s	
+[ footsteps approach ]	a	
+[ snaps fingers ]	a	
+[laughter and applause]	p	
+[angelic harp flourish]	m	
+[[PROMO]	o	
+[man whispers]	q	
+[ HAIR DRYER WHIRRING ]	a	
+[ mechanical humming ]	a	
+[GOSPEL MUSIC PLAYS]	m	
+[ IMITATING SCHWARZENEGGER ]	a	
+[ Indian accent ]	a	
+[ ICE CRACKLING ]	a	
+[ ring, ring ]	a	
+[Robert]	s	
+[ GUN SHOTS ]	a	
+[ KC ]	s	
+[ Thai ]	s	
+[Jeffery]	s	
+[ Villain ]	s	
+[bong]	a	
+[ Mandarin ]	f	
+[ ds ]	s	
+[Customer:]	s	
+[ WHOOOOSH! ]	a	
+[Turkey]	s	
+[ wind blowing ]	a	
+[ Arabic ]	f	
+[ Sponge 3 ]	s	
+[ EERIE MUSIC PLAYS ]	m	
+[CHILDREN SCREAMING]	p	
+[MUMBLING]	p	
+[ thunder rumbling ]	a	
+[Reporter]	s	
+[AUDIENCE OHS]	p	
+[Pop!]	a	
+[ Male Stylist ]	s	
+[Speaking Polish]	f	
+[THEME MUSIC PLAYING]	m	
+[ Ed Laughing To Song ]	a	
+[ Matt Ashworth ]	s	
+[ Ryon ]	s	
+[emale Announcer ]	s	Female Announcer
+[ Spongecaster ]	s	
+[ buzzes ]	a	
+[ quacks ]	a	
+[ RINGING ]	a	
+[ AUDIENCE BOOING ]	p	
+[ bird squawks ]	a	
+[ BLOWS ]	a	
+[ Leanne ]	s	
+[Prof.Burke]	s	
+[knock at door]	a	
+[ Erica ]	s	
+[ Crewperson ]	s	
+[ BREATHING HEAVILY ]	p	
+[Husband]	s	
+[ camera shutters clicking ]	a	
+[ Mimi ]	s	
+[ All scream ]	p	
+[ DOG WHINES ]	a	
+[ All Shouting At Once ]	p	
+[cell phone rings]	a	
+[ cellphone dings ]	a	
+[ CHRS AND APPLAUSE ]	p	Cheers and applause
+[LGHTER]	p	Laughter
+[ LIGHT APPLAUSE ]	p	
+[ Herb ]	s	
+[MUSIC, TALKING, LAUGHING]	m	
+[beeping]	a	
+[ VIDEO GAME NOISES ]	a	
+[ CROWD CHEERS ]	p	
+[ train sounds ]	a	
+[ Regis ]	s	
+[Speaking Mandarin]	f	
+[WOMAN VOCALIZING]	a	
+[ GIBBERISH ]	a	
+[click]	a	
+[ coughing continues ]	a	
+[ MAN SIGHS ]	p	
+[ Advisor 2 ]	s	
+[ Stairs Creak ]	a	
+[ #omRE]	u	
+[ Ray ]	s	
+[ computer beeps ]	a	
+[ Rifle Fires ]	a	
+[BABY COUGHING]	p	
+[Pilot]	s	
+[FAINT MUSIC PLAYING]	m	
+[ Stutters ]	p	
+[Mom and Dad]	s	
+[GROANS]	a	
+[ blows ]	a	
+[upbeat techno music]	m	
+[ ka-chunk ]	a	
+[ K. Tyrone ]	s	
+[ GASP ]	p	
+[ Ted ]	s	
+[ British VO ]	s	
+[ Loud Rumbling ]	a	
+[ALL TALKING AT ONCE]	s	
+[all cheering]	p	
+[ Vacuum Motor Humming ]	a	
+[roars loudly]	a	
+[ lighting a match ]	a	
+[ pneumatic wrench buzzing ]	a	
+[ Kids Yelling ]	p	
+[Chris & Tom]	s	
+[ Electricity crackles ]	a	
+[ ANIMALS SHOUTING ]	a	
+[sarcastic]	q	
+[ Coughs ]	p	
+[Worker One]	s	
+[ Kimi ]	s	
+[ thunder crashing ]	a	
+[gunshot]	a	
+[ Musick ]	m	Music
+[ Achoo! ]	p	
+[ CHUCKLING ]	p	
+[ AUDIENCE YELLING ]	p	
+[ Maria ]	s	
+[ Beep, Beep, Beep ]	a	
+[ NEW AGE MUSIC PLAYS ]	m	
+[DOG BARKS]	a	
+[ BELLS TOLLING ]	a	
+[ sobbing ]	p	
+[ Sigh ]	p	
+[ Sound Stops ]	a	
+[AUDIENCE GROANS]	p	
+[ Venus ]	s	
+[CHAINSAW REVS]	a	
+[mp]	u	
+[gulp]	p	
+[ Dr. Ling ]	s	
+[ Lucky ]	s	
+[ Neil ]	s	
+[ children laugh ]	p	
+[ machinery humming ]	a	
+[ coughing, tea kettle whistle ]	a	
+[ mouse click ]	a	
+[ROARING]	a	
+[ rumbling ]	a	
+[ cow mooing ]	a	
+[glass shatters]	a	
+[Speaking German]	f	
+[Dragon screeching]	a	
+[Jeff]	s	
+[WHIMPERING]	p	
+[ Cheering and Applause ]	p	
+[ SOBS ]	p	
+[RINGING]	a	
+[ animal grunts ]	a	
+[ cups clinking ]	a	
+[ SIZZLING ]	a	
+[Music fades out]	m	
+[ beach, dog bark ]	a	
+[ Taste Buds ]	s	
+[ exhale ]	p	
+[ ROOSTER CROWS ]	a	
+[ Meghan ]	s	
+[ BOSS ]	s	
+[ whistle blows, crowd cheers ]	a	
+[ lifeguard whistle ]	a	
+[ PAUL ]	s	
+[ clicking ]	a	
+[ANNOUNCER]	s	
+[ rooster crowing ]	a	
+[ HONKING ]	a	
+[ child screams ]	p	
+[SCREAM]	p	
+[hip-hop music]	m	
+[ sirens ]	a	
+[ Shaq ]	s	
+[ Store manager ]	s	
+[AUDIENCE CHANTS]	l	
+[ Amanda ]	s	
+[ Live Time Gap [ [00:10]	o	
+[ pizza dodging man's mouth ]	o	
+[Instrumental Music]	m	
+[Bell dings]	a	
+[ALL CHEERING]	s	
+[ hikers laughing, commenting ]	a	
+[owl howling]	a	
+[CROWD BOOS]	p	
+[ Angie ]	s	
+[GONG SOUNDS]	a	
+[ WOMAN SIGHS ]	p	
+[ VEHICLE APPROACHES ]	o	
+[BURKE]	s	
+[ sigh ]	p	
+[ OVERTALK ]	a	
+[ MUMBLES ]	p	
+[â™ª MUSIC ]	m	
+[ Car Alarm ]	a	
+[ cough ]	p	
+[ "ODD COUPLE" THEME PLAYS ]	m	
+[ Sue ]	s	
+[ Bottle #1 ]	s	
+[HONK]	a	
+[ crash! ]	a	
+[ pop ]	a	
+[GROWLING]	a	
+[ hikers whispering ]	q	
+[man over radio]	s	
+[ STATIC ]	a	
+[uplifting music]	m	
+[ squishing ]	a	
+[Drums of war beating]	a	
+[ slurping ]	p	
+[ BELL TOLLS ]	a	
+[CRASH!]	a	
+[ SLURPS ]	p	
+[door bell ringing]	a	
+[ CHEERSND APPLAUSE ]	p	Cheers and applause
+[Duracell Slamtones]	m	
+[growl]	a	
+[ Adrianna ]	s	
+[ UP-TEMPO MUSIC PLAYS ]	m	
+[CHATTER]	a	
+[EXPLOSIONS]	a	
+[ bells jingling ]	a	
+[Warrior battle cries]	p	
+[SOUND OF GUNFIRE]	a	
+[ Indistinct shouting ]	a	
+[ George ]	s	
+[ Card ]	s	
+[ woman laughs ]	p	
+[ Murmurs ]	p	
+[LAUGHR]	p	Laughter
+[ ETHEREAL MUSIC PLAYS ]	m	
+[ Don ]	s	
+[growls]	a	
+[ talking ]	a	
+[Laser Blasts]	o	
+[GERMAN ACCENT]	a	
+[ woosh ]	a	
+[ Reporter ]	s	
+[ MOTORCYCLE REVVING ]	a	
+[door knocking]	a	
+[ Stork ]	s	
+[bell tolls]	a	
+[crunch]	a	
+[ EVERYONE TALKING AT ONCE ]	a	
+[ Heather ]	s	
+[ SCREECHING ]	a	
+[Special Effects]	a	
+[ Woma]	s	Woman
+[ Operator Judy ]	s	
+[ ELEVATOR BELL DINGS ]	a	
+[speaking Mandarin]	f	
+[ Women Chattering ]	a	
+[ all giggle ]	p	
+[ Woman Announcing]	s	
+[ MUSIC RESUMES ]	m	
+[ EERS AND APPLAUSE ]	p	
+[ Pop, screech, doorbell rings ]	a	
+[cheers]	p	
+[ Male Anner ]	s	Male Announcer
+[ phone beeping ]	a	
+[ Emily Jo ]	s	
+[ crowd murmurs ]	p	
+[CREEPY MUSIC]	m	
+[ thunder rumbles ]	a	
+[ music playing ]	m	
+[Ding]	a	
+[ all scream ]	p	
+[claps]	p	
+[ DOG WHIMPERS ]	a	
+[ French accent ]	a	
+[BILL CLINTON]	s	
+[ TAXI WHISTLE ]	a	
+[ phone vibrates ]	a	
+[ Kinda ]	s	
+[ inhales, exhales ]	p	
+[SPEAKING CHINESE]	f	
+[ Man #3 ]	s	
+[bell dings]	a	
+[click, motor hums]	a	
+[ BOOs ]	p	
+[Growl]	a	
+[exhales]	p	
+[ loving it ]	o	
+[GOOGLE:]	s	
+[ding, ding]	a	
+[ alarm chirps ]	a	
+[ alarm rings ]	a	
+[ Radio Announcer ]	s	
+[scream]	p	
+[CLICKING]	a	
+[ TOYS CHATTERING ]	a	
+[ Bump ]	a	
+[whispered]	q	
+[ Reza ]	s	
+[ Toilet Flushes ]	a	
+[door opens]	a	
+[hooves pounding]	a	
+[ GASPING ]	p	
+[ crunching ]	a	
+[ cans opening ]	a	
+[ Funny Drawn Out Snore ]	p	
+[ girl screams ]	p	
+[ Whirring ]	a	
+[ SNEEZE ]	p	
+[ Pierre Alexander ]	s	
+[HORN]	a	
+[GASP]	p	
+[DRAMATIC MUSIC]	m	
+[ BOTH GRUNTING ]	p	
+[ BLOWER WHIRRING ]	a	
+[ SFX: PHONE RINGING ]	a	
+[ Orbit Girl ]	s	
+[ Gym shoes squeaking ]	a	
+[ DING DONG ]	a	
+[SPEAKING IN FRENCH]	f	
+[ Jasmine ]	s	
+[ Mr. Connally ]	s	
+[thud]	a	
+[ COINS JINGLE ]	a	
+[ Liquid Cleaner ]	s	
+[ Sarcastically ]	q	
+[NARRATOR]	s	
+[ CHEERS AND APPLAUS]	p	
+[ CROWD CHANTING ]	l	
+[ belches ]	p	
+[ Computer voice ]	a	
+[TELEPHONE RINGING]	a	
+[ IN IRISH ACCENT ]	a	
+[ CHEERS ANDPPLAUSE ]	p	Cheers and applause
+[ Yipping ]	a	
+[ tea kettle whistle ]	a	
+[electronic sound effects]	a	
+[ GUN FIRE ]	a	
+[BIRD SQUAWKS]	a	
+[SUSPENSEFUL MUSIC]	m	
+[ ? ]	i	
+[ Strahan ]	s	
+[ Sela ]	s	
+[drones crashing]	a	
+[director]	s	
+[ BACKGROUND MUSIC ]	m	
+[ IN HIGH-PITCHED VOICE ]	a	
+[HORSES NEIGH]	a	
+[ Clock Ticking ]	a	
+[ ALARM BLARING ]	a	
+[[WEBTEASE]	o	
+[ Jennifer Aniston ]	s	
+[ glass clinks ]	a	
+[ speaks Chinese ]	f	
+[ Thuds ]	a	
+[ HORN ]	a	
+[ Jimmeka ]	s	
+[ screaming with excitement ]	p	
+[SPEAKING ITALIAN]	f	
+[ All Gasping ]	p	
+[ MONKEY SQUEALS ]	a	
+[SCREAMGETTING LOUDER]	a	Scream getting louder
+[ Mom, ]	s	
+[ LASER SOUND ]	a	
+[ woman speaks Chinese ]	f	
+[ Squeals ]	a	
+[ CHEERS AND APPLAE ]	p	Cheers and applause
+[BUZZER SOUNDS]	a	
+[ Carol ]	s	
+[ Female voice on P.A. ]	a	
+[ Caletha ]	s	
+[ Glen ]	s	
+[ Voice breaking ]	a	
+[ Choys ]	s	
+[ CONAN PURRS ]	a	
+[ Vonetta ]	s	
+[ Justin ]	s	
+[ fake coughs ]	p	
+[ murmuring ]	p	
+[ wind whistles ]	a	
+[screaming panic]	p	
+[ clucking ]	a	
+[ Delaunta ]	s	
+[AUDIENCE GASPS]	p	
+[ Amy and Rob ]	s	
+[ Farrar ]	s	
+[ Kurt ]	s	
+[APPLAE]	p	Applause
+[ Alarm ]	a	
+[ CLICKING ]	a	
+[ monkey screeches ]	a	
+[ Lisping ]	p	
+[ SIREN WAILS ]	a	
+[AUDIENCE LAUGHTER]	p	
+[ air whooshes ]	a	
+[ CLUCKING ]	a	
+[ DRAMATIC MUSIC ]	m	
+[ WATER DRIPPING ]	a	
+[ Robotic voice ]	a	
+[ BIRD CALLING ]	a	
+[ ELMO GIGGLES ]	p	
+[ Sam ]	s	
+[thunder crashes]	a	
+[Jelly Bear]	s	
+[ PAY PHONE RINGS ]	a	
+[LIGHT GUITAR MUSIC]	m	
+[ Nick ]	s	
+[ SLAP ]	a	
+[ Hero Mom ]	s	
+[ Bailiff ]	s	
+[duck snoring]	a	
+[ chickens clucking ]	a	
+[ Flame whooshes ]	a	
+[SANTA]	s	
+[ Tony ]	s	
+[ breathing heavily ]	p	
+[ alarm blares ]	a	
+[ Cannon Blast ]	a	
+[bell rings]	a	
+[ VOCALIZING ]	a	
+[ rooster crows ]	a	
+[ Debbie ]	s	
+[ jet engine roaring ]	a	
+[ Inhales Deeply ]	p	
+[SPEAKING IN A FOREIGN LANGUAGE]	f	
+[AUDIENCE LAUGHS]	p	
+[ SPLASHING ]	a	
+[ director ]	s	
+[now arriving: city hospital]	o	
+[AUDIENCE CHEERING]	p	
+[ THUNDER RUMBLING ]	a	
+[SPEAKING JAPANESE]	f	
+[ Tintin ]	s	
+[content sigh]	p	
+[ door closes ]	a	
+[ bell clanging ]	a	
+[ indistinct talking ]	a	
+[ bird screeching ]	a	
+[instrumental music]	m	
+[ TALKINOVER EACH OTHER ]	a	
+[ rooster wings flapping ]	a	
+[ TALKING OVER EACH OTR ]	a	
+[ wolf howls ]	a	
+[ BEEPS ]	a	
+[ CHEERS AND APPUSE ]	p	Cheers and applause
+[Ho, ho, ho!]	a	
+[LAUGHTER.]	p	
+[ QUESTION INAUDIBLE ]	o	
+[AUDIENCE BOOS]	p	
+[ lullaby plays, men snoring ]	m	
+[ Cheerios spilling ]	a	
+[ CLAP CLAP ]	p	
+[ CLOCK TICKING ]	a	
+[ people screaming ]	p	
+[ Marcie ]	s	
+[ Woman Thinking ]	o	
+[DROPLETS]	a	
+[ Microwave Beeping ]	a	
+[ TAP ]	a	
+[ golf clubs clanking ]	a	
+[ M ]	s	
+[ Jahmil ]	s	
+[ Mayhem ]	s	
+[ Old Spice whistle ]	a	
+[ Stu ]	s	
+[ women screaming ]	p	
+[ Camera shutter snaps ]	a	
+[ ALARM RING, BONG ]	a	
+[VO]	s	
+[ TALKG OVER EACH OTHER ]	a	
+[FRENCH ACCENT]	a	
+[ Sponge 1 ]	s	
+[ keys clatter ]	a	
+[ Mrs. Davis ]	s	
+[ SFX: CRUNCH ]	a	
+[ Whistling In Tune ]	p	
+[ Evan ]	s	
+[siren wailing]	a	
+[ Mumbling ]	p	
+[Boss]	s	
+[next stop financial center]	o	
+[ Kissing ]	p	
+[ PAUSE ]	a	
+[ giggling ]	p	
+[Anthony]	s	
+[Yawning]	p	
+[ Uncle Ernie Groans ]	p	
+[ baby giggles ]	p	
+[LOUDER ORCHESTRAL MUSIC]	m	
+[ IMITATES MONKEY ]	a	
+[ slurp! ]	p	
+[ wind whistling ]	a	
+[ muffled ]	a	
+[[VO NEXT]	s	
+[ bing! ]	a	
+[ YODELING ]	m	
+[ woman saks Chinese ]	f	
+[ DONKEY BRAYS ]	a	
+[ snort ]	p	
+[silence]	a	
+[ Crying ]	p	
+[ noisemakers blow ]	a	
+[HORN HONKS]	a	
+[ Queen ]	s	
+[â™ªâ™ª]	m	
+[ Won ]	s	
+[ Paul ]	s	
+[ indistinct conversation ]	a	
+[ twig snaps ]	a	
+[ SPEAKING GERMAN ]	f	
+[ Wisest kid ]	s	
+[ shopper ]	s	
+[ Employee ]	s	
+[ Tisola ]	s	
+[ Bobby ]	s	
+[ Whistle blows ]	a	
+[ Announcer]	s	
+[ Deep inhalation ]	p	
+[Squeals of delight]	p	
+[ SHUTTER CLICK ]	a	
+[ MOANING ]	p	
+[ Melody ]	m	
+[ LAUGHR ]	p	Laughter
+[ speaking in Japanese ]	f	
+[ringing]	a	
+[WOOF WOOF]	a	
+[ low growl ]	a	
+[ BELLS RINGING ]	a	
+[groaning]	p	
+[ Shelly ]	s	
+[ Erina ]	s	
+[ Charles ]	s	
+[cell phone ringing]	a	
+[ Jelani ]	s	
+[ PURRS ]	a	
+[Deep breath]	p	
+[ imitating can opening ]	a	
+[ Woman Anno]	s	
+[sigh!]	p	
+[SINGING IN SPANISH]	f	
+[LOUD ORCHESTRAL MUSIC]	m	
+[ whacking piñata ]	a	
+[air horn blows]	a	
+[ FOREIGN LANGUAGE ]	f	
+[ emale Announcer ]	s	Female Announcer
+[ BARK ]	a	
+[ Muttering ]	p	
+[ MAN WHISTLES ]	p	
+[ DRUMMING ]	m	
+[ cellphone buzzing ]	a	
+[ Wade ]	s	
+[CARD SINGING]	l	
+[Engine Sounds]	a	
+[growling noises]	a	
+[SILENCE]	a	
+[ polar bear grunting ]	a	
+[ LASER SOUNDS ]	a	
+[BOTH LAUGH]	p	
+[ Annou]	s	Announcer
+[ chime ]	a	
+[ Malennounc ]	s	Male Announcer
+[voice]	s	
+[ Girl 1 ]	s	
+[ Screams ]	p	
+[HORN HONKING]	a	
+[ cellphones ringing ]	a	
+[ Doug's voice ]	s	
+[ louder boom ]	a	
+[ Jim Koch ]	s	
+[SPEAKING NATIVE TONGUE]	f	
+[ RELAXING MUSIC PLAYING ]	m	
+[ men grunting ]	p	
+[ both chuckle ]	p	
+[ imitates explosion ]	a	
+[ in Korean ]	f	
+[ DOOR KNOCK! ]	a	
+[ROLL CALL]	a	
+[ DRAMATIC MUSIC PLAYS ]	m	
+[ SNIFFLING ]	p	
+[ bicycle bell rings ]	a	
+[ Glazer ]	s	
+[ siren wails ]	a	
+[ music stops ]	m	
+[ Marcy ]	s	
+[TIRES SCREECHING]	a	
+[KIDS WHISPERING]	q	
+[ Orbit glint ]	u	
+[ IN DEEP VOICE ]	a	
+[ IN BRITISH ACCENT ]	a	
+[ Children ]	s	
+[PERFORMING RAP]	l	
+[ SCATTERED BOOS ]	p	
+[ CAR SKIDDING ]	a	
+[Cheese]	u	
+[ RAPPING ]	l	
+[ CHEE AND APPLAUSE ]	p	Cheers and applause
+[ SNORES ]	p	
+[ MAN LAUGHS, MONKEY SCREECHES ]	a	
+[ rewinding ]	a	
+[CLEARS THROAT]	p	
+[ Laughing, Hooting ]	a	
+[ ELEPHANTS GRUNTING ]	a	
+[ Inner Voice ]	s	
+[ TALKING OV EACH OTHER ]	a	
+[ ELMO GGLES ]	p	Elmo giggles
+[AUDIO DIFFICULTY]	o	
+[ camera flash ]	o	
+[ revving continues ]	a	
+[ piercing sound ]	a	
+[ CHEERS AND ALAUSE ]	p	Cheers and applause
+[ ice rattles ]	a	
+[ Souders ]	s	
+[ BUBBLES, BABY GIGGLING ]	a	
+[ popping ]	a	
+[ SNAPS FINGER ]	a	
+[ buzzing continues ]	a	
+[Kid]	s	
+[ ALARM CHIRPS ]	a	
+[SHOUTING EXCITEDLY]	p	
+[APPUSE]	p	Applause
+[ Daniel ]	s	
+[ heels clicking ]	a	
+[ Kristal ]	s	
+[ spoons clink ]	a	
+[ Kristen ]	s	
+[ snorting ]	p	
+[door closes]	a	
+[ Horn Honks ]	a	
+[scoffs]	p	
+[ Fema Announc ]	s	Female Announcer
+[together]	s	
+[ rain pattering ]	a	
+[ ball hitting paddle ]	a	
+[ GUN SHOT ]	a	
+[ boy ]	s	
+[ woman screams ]	p	
+[ Orbit trumpet ]	a	
+[ dog panting ]	a	
+[ Young man ]	s	
+[ chirps ]	a	
+[CROWD CHANTING]	l	
+[SLUUURRPP!]	p	
+[ HORN BLOWING ]	a	
+[BEEPING...]	a	
+[SQUAWK!]	a	
+[ rl ]	u	
+[ LAUTER ]	p	Laughter
+[ ticking ]	a	
+[ â™ª MUSIC ]	m	
+[ Thudding ]	a	
+[RAPPING]	l	
+[Man 3:]	s	
+[ Armstrong ]	s	
+[DOGS BARKING]	a	
+[ seagulls calling ]	a	
+[ bird chirping ]	a	
+[ CHIC'S "LE FREAK" PLAYS ]	l	
+[ siren chirps ]	a	
+[ metal rattling ]	a	
+[ chirping, buzzing continues ]	a	
+[ CHOCOLATE LAUGHS ]	p	
+[ Wellington ]	s	
+[ STEAM HISSES ]	a	
+[ Pony ]	s	
+[ Horse Whinnies ]	a	
+[ Man #4 ]	s	
+[Laughter and applause]	p	
+[ phones buzzing and beeping ]	a	
+[Thunk!]	a	
+[ SFX: DOG SQUEALS ]	a	
+[AUGHTER ]	p	Laughter
+[both laugh]	p	
+[CLOCK TICKING]	a	
+[ Manager 2 ]	s	
+[ Mujahid ]	s	
+[ Yoshioka ]	s	
+[Dumbfounded]	q	
+[ Vrrroomm! ]	a	
+[ fingers snap ]	a	
+[ TIRES SQUEALING ]	a	
+[baby coos]	p	
+[Wife:]	s	
+[APPLAUSE.]	p	
+[Man 2:]	s	
+[ dad ]	s	
+[ ALL GROWLING ]	p	
+[Monotone]	q	
+[deep breath]	p	
+[ Instrumental: Upbeat ]	m	
+[ Lou ]	s	
+[ cat 1 ]	a	
+[ toilet flushing ]	a	
+[ IN SOUTHERN ACCENT ]	a	
+[ SAD MUSIC PLAYING ]	m	
+[SLUUURRRRPPPP!]	p	
+[ SINGING IN FRENCH ]	f	
+[overlapping chatter]	a	
+[ Webb ]	s	
+[â™ª SINGING â™ª]	l	
+[ â™ª THEME MUSIC ]	m	
+[ short breath ]	p	
+[ Degeneres ]	s	
+[ Friends ]	s	
+[ Man Anno]	s	
+[ BOING ]	p	
+[ crash, laughter ]	a	
+[ Family Activity ]	o	
+[ MUFFLED NOISES ]	a	
+[ achoo! ]	p	
+[ "CATCH THE WIND" PLAYS ]	l	
+[ CROWD BOOS ]	p	
+[ Groans ]	p	
+[ Grunts ]	p	
+[ Phoebe ]	s	
+[ air howling ]	a	
+[ audience laughs ]	p	
+[ Crunching, Rhythmic Beat ]	m	
+[ROARING ON TELEVISION]	a	
+[ECHO]	a	
+[beep]	a	
+[ Orbit trumpet plays ]	m	
+[ HEAVY BREATHING ]	p	
+[OPRAH LAUGHS]	p	
+[WOMAN SCREAMING]	p	
+[ IMITATING CAR ENGINE ]	a	
+[all shouting]	p	
+[fast-paced music]	m	
+[ scratching ]	a	
+[ Jill Strange ]	s	
+[Sarcastically]	q	
+[ Dog Yawns ]	a	
+[ RIMSHOT ]	o	
+[upbeat instrumental music]	m	
+[ RADIO CHATTER ]	a	
+[MOO]	a	
+[ Engine rattles ]	a	
+[ SFX: SQUEALING TIRES ]	a	
+[HEARTBEAT]	a	
+[ alarm blaring ]	a	
+[CRICKETS CHIRPING]	a	
+[ RUMBLING ]	a	
+[ Webber ]	s	
+[ Hudson ]	s	
+[ Peyton ]	s	
+[ lemaounn ]	s	
+[[READ ON]	u	
+[ wind rushes ]	a	
+[ Family Activity Throughout ]	o	
+[DONKEY BRAYING]	a	
+[ Wheezing Breaths ]	p	
+[ Whimpering ]	p	
+[ Maragno ]	s	
+[ DOGS BARKING ]	a	
+[ squeals ]	a	
+[ CAMERA SHUTTER ]	a	
+[ Both Laugh ]	p	
+[ whoosh! ]	a	
+[CHEWING]	p	
+[ Orbit Trumpet ]	m	
+[ LGHTER ]	p	Laughter
+[ ROCK MUSIC PLAYING ]	m	
+[ Nadine ]	s	
+[SPEAKING NATIVE LANGUAGE]	f	
+[Gaby]	s	
+[COW MOOING]	a	
+[Brad whispers]	q	
+[baby cooing]	p	
+[ crowd groans ]	p	
+[ INTEL BONG ]	a	
+[Curly Fry]	s	
+[INHALES]	p	
+[ CHANTS ]	l	
+[explosion]	a	
+[ AS OBAMA ]	a	
+[ Penguin ]	s	
+[ CELLPHONE RINGING ]	a	
+[ Vaum Motorumming ]	a	Vacuum Motor Humming
+[YELLS]	p	
+[ TALKING OVER EH OTHER ]	a	Talks over each other
+[BARACK OBAMA]	s	
+[ Jill ]	s	
+[laughs nervously]	p	
+[ Birds Screech ]	a	
+[ fingers tapping ]	a	
+[ Tapping ]	a	
+[ pbht! ]	a	
+[sobbing]	p	
+[ Merritt ]	s	
+[ Faint Squeals, Screams ]	a	
+[BUZZER SOUNDING]	a	
+[[st up]	u	
+[piano music]	m	
+[â™ª MUSIC â™ª]	m	
+[ Pepsi pouring ]	a	
+[ELF]	s	
+[o/~ ]	m	
+[referee's whistle blows]	a	
+[ Whistles ]	a	
+[ bell dings, kids cheering ]	a	
+[ Ahhh ]	a	
+[Laughing]	p	
+[ FLOOR SQUEAKS ]	a	
+[AUDIENCE APPLAUSE]	p	
+[ Carnival ]	u	
+[ahh]	p	
+[ SLURRING ]	p	
+[whistling]	p	
+[ MUSIC PLAYING ON TV ]	m	
+[ Alyson ]	s	
+[Ting]	u	
+[Glass shattering]	a	
+[baby crying]	p	
+[percussive music]	m	
+[ can opening ]	a	
+[ TALKING ER EACH OTHER ]	a	
+[ bell chiming ]	a	
+[ SCATTING ]	l	
+[ROAR]	a	
+[ GUN COCKS ]	a	
+[ Shaniya ]	s	
+[ shoes squeaking ]	a	
+[ insect buzzing ]	a	
+[ Powder Cleaner ]	o	
+[ALAUSE]	p	Applause
+[HONKS]	a	
+[ perfume sprays ]	o	
+[ LAUGHTE]	p	Laughter
+[ smack! smack! ]	p	
+[NEWSCASTER]	s	
+[UPBEAT SWING MUSIC]	m	
+[ Captain ]	s	
+[ roasting firewood ]	a	
+[ music continues ]	m	
+[ timers ringing ]	a	
+[ Man Shouts ]	p	
+[Narrator:]	s	
+[ INAUDIBLE QUESTION ]	a	
+[HISSING]	a	
+[spring releases]	o	
+[panting]	a	
+[ baby crying, dog barking ]	a	
+[STRANGE SPEAKING]	u	
+[ DOG WHINE ]	a	
+[Spider-Man]	s	
+[Meow!]	a	
+[ cat meow ]	a	
+[ truck horn ]	a	
+[squirting]	a	
+[ knock on window ]	a	
+[ insects buzzing ]	a	
+[ Squirrel ]	s	
+[ FLATULENCE ]	a	
+[DRUMROLL]	m	
+[SQUEALING, CRASH]	a	
+[ bells ding ]	a	
+[ nose blowing ]	a	
+[tires screech]	a	
+[ FAINT BEEPING THROUGHOUT ]	a	
+[ Nephew ]	s	
+[COOING]	a	
+[ TENOR SINGING ARIA ]	m	
+[ Myron ]	s	
+[ LKING OVER EACH OTHER ]	a	Talking over each other
+[ Sirens Wailing ]	a	
+[TECHNICAL DIFFICULTIES]	o	
+[ Mouse Click ]	a	
+[ Sssss ]	a	
+[ BANGING ]	a	
+[ RHYTHM CONTINUES ]	a	
+[ Owner ]	s	
+[ cricket chirping ]	a	
+[ BLOWS HORN ]	a	
+[MUFFLED]	a	
+[ TALKING OVERACH OTHER ]	a	Talking over each other
+[sniff]	a	
+[ Joey ]	s	
+[ cat yodeling ]	a	
+[ HOWLS ]	a	
+[GURGLES]	a	
+[ Vrrroooomm! ]	a	
+[ Customer ]	s	
+[The Who'sTeenage Wasteland]	l	
+[ Vet ]	s	
+[ adding machine whirring ]	a	
+[hard rock]	o	
+[ Puppy Panting ]	a	
+[ Angels ]	s	
+[ Ella ]	s	
+[ clucks ]	a	
+[ CREAKING ]	a	
+[Cheers and applause]	p	
+[AC/DC: "Back in Black"]	l	
+[chuckling]	p	
+[ bubbles, baby giggling ]	a	
+[Coughing]	p	
+[ Elephant ]	s	
+[ Dramatic music plays ]	m	
+[ TALKING OVER EACH OTHE]	a	Talking over each other
+[ Female Ancer ]	s	Female Announcer
+[Female Narrator]	s	
+[Narrator]	s	
+[ WAILING ]	p	
+[ Cough, Sneeze, Sniffle ]	p	
+[INDIAN ACCENT]	a	
+[PAINTBALL NOISES]	a	
+[ BICYCLE BELL RINGS ]	a	
+[squeals]	p	
+[exciting jazz music]	m	
+[Whoosh of steam]	a	
+[ moos ]	a	
+[ caller ]	s	
+[ SNICKERING ]	p	
+[ gargling ]	p	
+[ Crowd Murmuring ]	p	
+[ MEOW ]	a	
+[CRAZY RAMBLINGS]	o	
+[ piano plays ]	m	
+[SQUEALING]	a	
+[Husband:]	s	
+[ ROARING ]	a	
+[ fancy voice ]	a	
+[ IN ENGLISH ACCENT ]	a	
+[ SCATTERED OHs ]	a	
+[ knocking on door ]	a	
+[ Car Problems ]	o	
+[ Crunch ]	a	
+[ TAING OVER EACH OTHER ]	a	Talking over each other
+[ Engine Revving ]	a	
+[ Morgan Freeman ]	s	
+[SIGH]	p	
+[ Baby Giggles ]	p	
+[ sigh of relf ]	p	sigh of relief
+[weird dog moan/squeak]	a	
+[HEART BEATING]	a	
+[ Congregation ]	s	
+[dog whine]	a	
+[gunfire]	a	
+[ banging on door ]	a	
+[ TALKING OVER EACH HER ]	a	Talking over each other
+[ AS TRUMP ]	a	
+[ coughs, sniffles ]	a	
+[dog yawning/squeaking]	a	
+[quiet dog groan]	a	
+[ music, laughter stop ]	m	
+[PIANO PLAYING]	m	
+[ Giada ]	s	
+[ car alarm deactivates ]	a	
+[ BIRD CALLS ]	a	
+[ ALARM ]	a	
+[yawns]	p	
+[ EXHALES DEEPLY ]	p	
+[ WHOOPING ]	p	
+[ Parnell ]	s	
+[PUMPERL BARKS]	a	
+[ Jade ]	s	
+[ blaring echoes, fades ]	a	
+[ David ]	s	
+[ SIMULTANEOUS SPEAKERS ]	s	
+[ THUNDER ROARS ]	a	
+[ SlimSoft ]	u	
+[Tiger Woods]	s	
+[Drum]	m	
+[ GLASS SHATTERS ]	a	
+[FOOTSTEPS RUNNING]	a	
+[ TALKING OVER EACOTHER ]	a	Talking over each other
+[announcer]	s	
+[ENERGETIC MUSIC STARTS]	m	
+[toy car electric motor]	a	
+[ baby babbling ]	p	
+[ REEL CASTING ]	u	
+[ Boy voice ]	a	
+[LOUD CRUNCH]	a	
+[ COMPUTER BEEPS ]	a	
+[ GLASS BREAKS ]	a	
+[ Car Alarm Wailing ]	a	
+[OINKING]	a	
+[tape rewinding]	a	
+[ Shannon ]	s	
+[ CROWD NOISE ]	a	
+[ Chorus ]	s	
+[C[CHEERING]	p	Cheering
+[ flushing ]	a	
+[ men laugh ]	p	
+[conveyor belt humming]	a	
+[HEAVY ROCK MUSIC PLAYS]	m	
+[SPEAKING MANDARIN]	f	
+[ Michael Hall ]	s	
+[ CRASH, ALARM BLARING ]	a	
+[ gobble, gobble ]	a	
+[ IMITATES SCHWARZENEGGER ]	a	
+[BAND PLAYING]	m	
+[ gurgling ]	p	
+[ UTENSIL DROPS ]	a	
+[soft piano music]	m	
+[MUSIC BREAK]	m	
+[ APPLAUSE AND CHEERS ]	p	
+[ CHEERS AND APPLAUSE]	p	
+[RUMBLING]	a	
+[ Bell Dings ]	a	
+[ whimpers ]	a	
+[ SLIDE WHISTLE ]	a	
+[STRANGE LAUGHING]	p	
+[ INHALES SHARPLY ]	p	
+[ speaking Chinese ]	f	
+[ DISTANT THUNDER RUMBLING ]	a	
+[WHISPERS]	q	
+[audience booing]	p	
+[ POPPING ]	a	
+[clang clang]	a	
+[ bell tolls ]	a	
+[ ROOSTER CROWING ]	a	
+[growling]	a	
+[horn honks]	a	
+[ phones ping, buzz ]	a	
+[CROWD CHEERING OVER PHONE]	p	
+[M[Mususicic]	m	Music
+[ zips ]	a	
+[ Screaming ]	p	
+[laugh]	p	
+[ News TV ]	o	
+[ washer and dryer sounds ]	a	
+[ DISCO MUSIC PLAYS ]	m	
+[ Orbit girl ]	s	
+[ BEATBOXING ]	p	
+[BELL TOLLS]	a	
+[ WHISTLING WIND ]	a	
+[ Staake ]	u	
+[Blower stops]	a	
+[ deep breathing ]	p	
+[ A]	u	
+[ exclaims ]	q	
+[upbeat jazz arrangement]	m	
+[ car alarm blaring ]	a	
+[ strike! ]	a	
+[tense music]	m	
+[ SIREN CHIRPS ]	a	
+[ tab pops ]	a	
+[ Cheese ]	s	
+[ Dr. Ashley ]	s	
+[ doorbell ]	a	
+[ beeps, tires screech ]	a	
+[ DOOR BELL ]	a	
+[quickly]	u	
+[Molly]	s	
+[ Woman Singing In Shower ]	a	
+[both laughing]	p	
+[ IN UNISON ]	s	
+[ Ringing ]	a	
+[ woman speaking Italian ]	f	
+[ CHEERS A APPLAUSE ]	p	Cheers and applause
+[ FEMALE ANNOUNCER ]	s	
+[SFX: INTEL BONG]	l	
+[Singing]	l	
+[toy car horn beeping]	a	
+[ SHAKING ]	a	
+[ Air Rushing ]	a	
+[ Donkey ]	a	
+[ indistinct talking on P.A. ]	a	
+[ Byron ]	s	
+[ Rattling Sound Continues ]	a	
+[ Grunting ]	a	
+[ POLICE RADIO, INDISTINCT ]	a	
+[ SMOOCHES ]	p	
+[knocking]	a	
+[ Old Man ]	s	
+[Women]	s	
+[ Cross ]	u	
+[ engine sputtering ]	a	
+[ Baby Crying ]	p	
+[ Store ]	u	
+[PHONE RINGS AGAIN]	a	
+[ INTERFERENCE ]	a	
+[ VIBRATING CONTINUES ]	a	
+[ FRENCH ACCENT ]	a	
+[ Thunder ]	a	
+[ airplane engine whines ]	a	
+[ both sigh ]	p	
+[ beat-boxing ]	p	
+[Awwwwww]	p	
+[ RETCHING ]	p	
+[ Female Announcer]	s	
+[ wink! ]	o	
+[ LAUGHTER AND GROANS ]	a	
+[ IMITATING ARNOLD ]	a	
+[SIRENS BLARING]	a	
+[ Tap, Tap ]	a	
+[ Sighing ]	p	
+[ AUDIENCE EWs ]	p	
+[NORMAL VOICE]	a	
+[Male voice]	s	
+[BACKGROUND SOUNDS]	a	
+[ â™ªâ™ª ]	m	
+[ Girl voice ]	a	
+[ whistles and clapping ]	p	
+[ SPEAKING SIMULTANEOUSLY ]	a	
+[Brother-In-Law off camera]	s	
+[Everyone Laughter,Crying]	p	
+[ boink ]	a	
+[ buzz, swat! ]	a	
+[ CELL PHONE VIBRATES ]	a	
+[ EXHALES SHARPLY ]	p	
+[ ANGELIC VOICES VOCALIZING ]	l	
+[ switch clicks ]	a	
+[ beeping, ticks ]	a	
+[Sister off screen]	s	
+[ crowd chatters and groans ]	p	
+[ SHOTS ]	a	
+[DRIPPING]	a	
+[TIRES SCREECH]	a	
+[Applause. Laughs]	p	
+[ radio chatter, siren wails ]	a	
+[AUDIENCE OOHS]	p	
+[ Piano ]	m	
+[HEARTBEAT CONTINUES]	a	
+[ phone ding! ]	a	
+[GOOGLE]	u	
+[CROWS LAUGHING]	a	
+[ Woman On R¶ Bum-bum,stinct ]	u	
+[ Chattering ]	a	
+[CLANK]	a	
+[ uckl]	p	
+[ dog whines ]	a	
+[CHOIR SINGING]	l	
+[ chuckl ]	a	
+[ SHOTS FIRED ]	a	
+[KIDS GIGGLING]	p	
+[ Man Announcing]	s	
+[SHOWER RUNNING]	a	
+[ Cell Phone Ringing ]	a	
+[ ECHOES ]	a	
+[whirring]	a	
+[BALLS BOUNCING]	a	
+[ Becky ]	s	
+[ typing ]	a	
+[ ka-chunk, chirp ]	a	
+[ dog sniffs ]	a	
+[ booooooom! ]	a	
+[ tirescreech ]	a	
+[Worker Four]	s	
+[ PLAYING "TAPS" ]	m	
+[ air whooshing ]	a	
+[ beads rattling ]	a	
+[ Inner monologue ]	s	
+[ ROBOT VOICE ]	s	
+[ rimshot ]	o	
+[ Fisk Johnson ]	s	
+[ GULL CALLING ]	a	
+[SPEAKING RUSSIAN]	f	
+[ child ]	s	
+[ angry ]	q	
+[ CHEERS AND APPLAUSE CONTINUE ]	p	
+[ VOLUME DECREASES ]	a	
+[ Creak ]	a	
+[ imitates birds calling ]	a	
+[singing in German]	f	
+[electronic music]	m	
+[ slam! ]	a	
+[sfx: knocking on door]	a	
+[ fabric flapping in wind ]	a	
+[ cranking noise ]	a	
+[ CHEERS/APPLAUSE ]	p	
+[BUZZING]	a	
+[BAGPIPES]	m	
+[ Sniffles ]	a	
+[ Gags ]	a	
+[ diving ]	a	
+[ Sofia ]	s	
+[ pickle crunches ]	a	
+[WHIMPERS]	a	
+[SNIFFLES]	a	
+[ SINGING IN ITALIAN ]	f	
+[SPEAKING GIBBERISH]	o	
+[ EVIL LAUGHTER ]	p	
+[ â™ª THEME â™ª ]	m	
+[ Stacie ]	s	
+[ Martin Luther King Jr. ]	s	
+[ jackhammer rattles ]	a	
+[ Inaudible ]	a	
+[ baby coos ]	p	
+[ Radio ]	a	
+[ Crew ]	s	
+[ AUDIENCE YELLS ]	p	
+[ note plays ]	m	
+[SFX]	a	
+[ Umpire ]	s	
+[ GUITAR STRUMMING ]	m	
+[ Rattling Sound ]	a	
+[sound of starter pistol]	a	
+[ Biker ]	s	
+[ restaurant sounds ]	a	
+[ Bee ]	a	
+[ indistinct talking on TV ]	a	
+[ DRAMATIC MUSIC SWELLS ]	m	
+[ Bear ]	s	
+[ High Operatic Voice ]	a	
+[ Can ]	u	
+[[NEXT VO]	s	
+[ Alencou V ]	s	
+[ nior ]	u	
+[ alarm buzzing ]	a	
+[ Panting ]	p	
+[ SHOOTING ]	a	
+[ SPEAKING NATIVE LANGUAGE ]	f	
+[ DRILL WHIRS ]	a	
+[ Cash Register Rings ]	a	
+[sfx: doorbell rings]	a	
+[ FARTS ]	a	
+[POP!]	a	
+[ giggle ]	p	
+[ SFX: CHEERING ]	p	
+[ shirt ]	u	
+[ Jerry ]	s	
+[ Antacid ]	u	
+[ horse snorts ]	a	
+[PEOPLE CHATTERING]	p	
+[ No Audible Dialogue ]	a	
+[ POLICE RADIO CHATTER ]	a	
+[ Guy toe ]	u	
+[ Todd ]	s	
+[Soap Starlet]	s	
+[milk pouring]	a	
+[ CAMERA SHUTTERS ]	a	
+[Crunch]	a	
+[ grumbling ]	p	
+[ Sparking ]	a	
+[EAGLE CAW]	a	
+[ whacking piñata, grunting ]	a	
+[AW]	a	
+[ FIFE AND DRUM CORPS PLAYS ]	m	
+[BEACH SOUNDS]	a	
+[whistle blows]	a	
+[narration throughout]	a	
+[ HORNS BLARING ]	a	
+[ dog barks, pants ]	a	
+[CHILDREN SINGING SOFTLY]	l	
+[ Sea, laughing ]	a	
+[COW MOOS]	a	
+[audible safety beeping]	a	
+[ "1812 Overture" playing ]	l	
+[ manager 1 ]	s	
+[ explosions ]	a	
+[ Girl toe ]	u	
+[ GUITAR PLAYING ]	m	
+[ Bas ]	u	
+[ SUPERFAN ]	s	
+[ Simpson ]	s	
+[ TECHNO MUSIC PLAYS ]	m	
+[DOOR CLOSES]	a	
+[ Car Honk, Traffic Noise ]	a	
+[ DEEP VOICE ]	a	
+[ Crowd Cheering ]	p	
+[ imitating siren ]	a	
+[ AUDIENCE MEMBER CHEERS ]	p	
+[ KIDS CHEERING ]	p	
+[ ping! ping! ]	a	
+[ kissing noises ]	p	
+[AUDIENCE AWING]	p	
+[alarm bell ringing]	a	
+[ SINGING OFF KEY ]	l	
+[audience ohs]	p	
+[ BUBBLES ]	a	
+[ Male Judge ]	s	
+[ Freeman ]	s	
+[ GARGLING ]	p	
+[ WOMAN SHRIEKS ]	p	
+[ Patty ]	s	
+[ Cub ]	s	
+[ metal detector warbling ]	a	
+[ HORNS HONK ]	a	
+[ cellphone translating ]	s	
