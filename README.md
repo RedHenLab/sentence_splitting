@@ -9,6 +9,13 @@ python3 sentence_splitting.py -a /path/to/nonbreaking_prefixes/ inputfile.txt | 
 
 The output is a well-formed XML file that contains exactly one sentence per line. XML tags relevant to the sentence are not guaranteed to be on the same line as the sentence.
 
+To check that the file is ok, it can be tested with
+```bash
+xmllint --nouout outputfile.xml
+```
+
+If this command terminates without printing an error message, the file is well-formed XML.
+
 The output can then be processed with Stanford CoreNLP using the following commands (for version 3.7.0).
 Dependency Parser:
 ```bash
