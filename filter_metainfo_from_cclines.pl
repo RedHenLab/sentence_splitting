@@ -16,7 +16,7 @@ my $dictpath = $ARGV[0] or die "Please specifiy the path to the dictionaries\n";
 
 # Set the abbreviations in the dictionaries
 my %fullvalues = (
-	"s" => "speakeridentification",
+	"s" => "speakeridentification", # (John, woman, captain)
 	"a" => "audio_description", # including silence
 	"f" => "foreign_language", # not English
 	"l" => "lyrics", # music with words
@@ -24,7 +24,6 @@ my %fullvalues = (
 	"o" => "orientation", # orienting information -- meta-information about the program (END CLIP)
 	"p" => "paralinguistic_signal", # applause, laugh, sigh, hiss
 	"q" => "quality_of_expression", # unenthusiastic, sheepishly, proudly, nervously
-	"s" => "speaker_identification", # (John, woman, captain)
 	"t" => "on-screen_text_repeated_in_captions" # (seems to occur only on WWW_Russia so far)
 #	"u" => "undetermined", # Should this be here, actually?
 #	"n" => "not in brackets" # (mistaken entry)
@@ -128,10 +127,10 @@ while (my $x = <STDIN>) {
 			if ($coldict{$match}[0] eq "s") { # only the item itself
 				if (@{$coldict{$match}} > 1) {
 					my $value = $coldict{$match}[1];
-					$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*/><meta type="speakeridentifcation" original_value="$1" value="$value" \/>/;
+					$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*/><meta type="speakeridentification" original_value="$1" value="$value" \/>/;
 				}
 				else {
-					$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*/><meta type="speakeridentifcation" value="$1" \/>/;
+					$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*/><meta type="speakeridentification" value="$1" \/>/;
 				}
 			}
 			elsif ($coldict{$match}[0] eq "m") { # what comes after it, too
@@ -172,7 +171,6 @@ while (my $x = <STDIN>) {
 			}
 		}
 	}
-
 	print $x,"\n";
 
 }
