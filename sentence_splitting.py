@@ -109,10 +109,10 @@ def check_normal_case_sentences(sentences, abbreviations, language):
         if float(lc_chars) / len(sentence_wo_tags) >= 0.25:
             new_sentences = []
             # tags as single tokens
-            sentence = re.sub(r"(<ccline) (start=\S+) (end=[^>]+>)", r"\1_\2_\3", sentence)
+            sentence = re.sub(r"(<ccline) (start=\S+) (end=[^>]+) (/>)", r"\1_\2_\3_\4", sentence)
             words = re.split("\s+", sentence)
             for i, word in enumerate(words):
-                word = re.sub(r"(<ccline)_(start=[^_]+)_(end=[^>]+>)", r"\1 \2 \3", word)
+                word = re.sub(r"(<ccline)_(start=[^_]+)_(end=[^>_]+)_(/>)", r"\1 \2 \3 \4", word)
                 if i == 0:
                     new_sentences.append([word])
                     continue
@@ -157,8 +157,9 @@ def _check_end_of_lines(text, timestamps, line_lengths, max_line_length, boundar
     for line, timestamp in zip(text, timestamps):
         line = line.lstrip()
         escapedline = xmlescape(line);
-        tagged_line = '<ccline start="%s" end="%s">%s' % (timestamp[0], timestamp[1], escapedline)
-        closing_tag = "</ccline>"
+        tagged_line = '<ccline start="%s" end="%s" />%s' % (timestamp[0], timestamp[1], escapedline)
+#        closing_tag = "</ccline>"
+        closing_tag = ""
         # skip empty lines
         if line == "":
             continue

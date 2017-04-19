@@ -60,8 +60,35 @@ foreach my $filename (@filenames) {
 #print Dumper(%brackdict);
 #die;
 
-# MAIN LOOP
+# SETTINGS for XML checking: We need pseudo-XML for CWB but actual XML to verify the file. So we can set the opening and closing tags here and can decide which we want to check by making them the open/close tags and the other the self-closing ones.
+# The files should be well-formed and validate with both settings.
+
+# SETTING 1 - does not conform to XML standard but is what we need for CQP; however, Stanford CoreNLP does not like this.
+#my $storystart = "<story>";
+#my $storyend = "</story>";
+#my $turnstart = "<turn>";
+#my $turnend = "</turn>";
+
+# SETTING 2 - conforms to XML standard
+my $storystart = "<story_start />";
+my $storyend = "<story_end />";
+my $turnstart = "<turn>";
+my $turnend = "</turn>";
+
+# SETTING 3 - conforms to XML standard
+#my $storystart = "<story>";
+#my $storyend = "</story>";
+#my $turnstart = "<turn_start />";
+#my $turnend = "<turn_end />";
+
+
+my $storyopen = 0;
+my $turnopen = 0;
+
 print '<?xml version="1.0" encoding="UTF-8"?>',"\n";
+
+# MAIN LOOP
+
 while (my $x = <STDIN>) {
 	chomp $x;
 	$x =~ s/\x00//g;
@@ -71,9 +98,20 @@ while (my $x = <STDIN>) {
 	$x =~ s/\x0F//g;
 	$x =~ s/\x1B//g;
 	$x =~ s/\x19/&apos;/g;
+	print "BELLO INLINE: $x\n";
 
 	# First let's get rid of the first and last line with the text-tags.
 	if ($x =~ /^<\/?text/) {
+		if ($x =~ /<\/text>/) {
+			if ($turnopen == 1) {
+				$x =~ s/<\/text>/$turnend<\/text>/;
+				$turnopen = 0;
+			}
+			if ($storyopen == 1) {
+				$x =~ s/<\/text>/$storyend<\/text>/;
+				$storyopen = 0;
+			}
+		}
 		print $x,"\n";
 		next;
 	}
@@ -85,25 +123,145 @@ while (my $x = <STDIN>) {
 
 
 	# Story boundary
-	$x =~ s/(?<=>)(\s*&gt;&gt;&gt;\s*)+/<storyboundary \/>/g;
-	# Story boundary EOL
-	$x =~ s/(?<!("|'|\/))(?:\s*&gt;&gt;&gt;\s*)+<\/ccline/\n<storyboundary \/><\/ccline/g;
-	# Turn boundary
-	$x =~ s/(?<=>)(\s*&gt;&gt;\s*)+/<turnboundary \/>/g;
-	# Turn boundary EOL
-	#$x =~ s/(?<!(&quot;|&apos;|\/))(?:\s*&gt;&gt;\s*)+<\/ccline/\n<turnboundary \/><\/ccline/g;
-	# When XML entities were introduced, the previous line generated an error with variable length lookbehinds not being implemented, that is why it was split up into the following two lines:
-	$x =~ s/(?<!(&quot;|&apos;))(?:\s*&gt;&gt;\s*)+<\/ccline/\n<turnboundary \/><\/ccline/g;
-	$x =~ s/(?<!(\/))(?:\s*&gt;&gt;\s*)+<\/ccline/\n<turnboundary \/><\/ccline/g;
+	if ($storyopen == 1) {
+		# Close open tag and open a new one for every occurrence
+		$x =~ s/(?<=>)(\s*&gt;&gt;&gt;\s*)+/$storyend$storystart/g;
+	}
+	else {
+		# Open a new tag and then close the open tag and open a new one for ever further occurrence
+		if ($x =~ s/(?<=>)(\s*&gt;&gt;&gt;\s*)+/$storystart/) {
+			$x =~ s/(?<=>)(\s*&gt;&gt;&gt;\s*)+/$storyend$storystart/g;
+			$storyopen = 1;
+		}
+	}
+
 	# Story boundary inline
-	$x =~ s/(?<!>)\s*&gt;&gt;&gt;\s+/\n<storyboundary \/>/g;
+	if ($storyopen == 1) {
+		# Close open tag and open a new one for every occurrence
+		$x =~ s/(?<!>)\s*&gt;&gt;&gt;\s+/\n$storyend$storystart/g;
+	}
+	else {
+		# Open a new tag and then close the open tag and open a new one for ever further occurrence
+		if ($x =~ s/(?<!>)\s*&gt;&gt;&gt;\s+/\n$storystart/) {
+			$x =~ s/(?<!>)\s*&gt;&gt;&gt;\s+/\n$storyend$storystart/g;
+			$storyopen = 1;
+		}
+	}
+
+	# Story boundary EOL
+	if ($storyopen == 1) {
+		# Close open tag and open a new one for every occurrence
+		$x =~ s/(?<!("|'|\/))(?:\s*&gt;&gt;&gt;\s*)+<ccline/\n$storyend$storystart<ccline/g;
+	}
+	else {
+		# Open a new tag and then close the open tag and open a new one for ever further occurrence
+		if ($x =~ s/(?<!("|'|\/))(?:\s*&gt;&gt;&gt;\s*)+<ccline/\n$storystart<ccline/) {
+			$x =~ s/(?<!("|'|\/))(?:\s*&gt;&gt;&gt;\s*)+<ccline/\n$storyend$storystart<ccline/g;
+			$storyopen = 1;
+		}
+	}
+	# Turn boundary
+	if ($turnopen == 1) {
+		# Close open tag and open a new one for every occurrence
+		$x =~ s/(?<=>)(\s*&gt;&gt;\s*)+/$turnend$turnstart/g;
+		print "BELLO ", __LINE__, " ", $turnopen,"\n";
+	}
+	else {
+		# Open a new tag and then close the open tag and open a new one for ever further occurrence
+		if ($x =~ s/(?<=>)(\s*&gt;&gt;\s*)+/$turnstart/) {
+			$x =~ s/(?<=>)(\s*&gt;&gt;\s*)+/$turnend$turnstart/g;
+			$turnopen = 1;
+			print "BELLO ", __LINE__, " ", $turnopen,"\n";
+		}
+	}
+
 	# Turn boundary inline
-	#$x =~ s/(?<!(&quot;|&apos;|\/))\s*&gt;&gt;\s+/\n<turnboundary \/>/g;
-	# When XML entities were introduced, the previous line generated an error with variable length lookbehinds not being implemented, that is why it was split up into the following two lines:
-	$x =~ s/(?<!(&quot;|&apos;))\s*&gt;&gt;\s+/\n<turnboundary \/>/g;
-	$x =~ s/(?<!(\/))\s*&gt;&gt;\s+/\n<turnboundary \/>/g;
+	if ($turnopen == 1) {
+		$x =~ s/(?<!(&quot;|&apos;))\s*&gt;&gt;\s+/\n$turnend$turnstart/g;
+		$x =~ s/(?<!(\/))\s*&gt;&gt;\s+/\n$turnend$turnstart/g;
+	}
+	else {
+		my $firstmatch1;
+		my $firstmatch2;
+		my $dotheymatch = 0;
+		if ($x =~ /(?<!(&quot;|&apos;))\s*(&gt;&gt;)\s+/) {
+			$dotheymatch = 1;
+			$firstmatch1 = $-[2];
+		}
+		if ($x =~ /(?<!(\/))\s*(&gt;&gt;)\s+/) {
+			$dotheymatch = 1;
+			$firstmatch2 = $-[2];
+		}
+print "BELLO ", __LINE__, " Firstmatch1 $firstmatch1 Firstmatch2 $firstmatch2\n";
+		if (($dotheymatch == 1) && ($firstmatch1 <= $firstmatch2)) { # equals should not occur, but we'll better treat this case
+print "BELLO ", __LINE__, " ", $turnopen,"\n";
+			# Open a new tag and then close the open tag and open a new one for ever further occurrence
+			$x =~ s/(?<!(&quot;|&apos;))\s*&gt;&gt;\s+/\n$turnstart/;
+			$x =~ s/(?<!(&quot;|&apos;))\s*&gt;&gt;\s+/\n$turnend$turnstart/g;
+			$x =~ s/(?<!(\/))\s*&gt;&gt;\s+/\n$turnend$turnstart/g;
+			$turnopen = 1;
+		}
+		elsif (($dotheymatch == 1) && ($firstmatch1 > $firstmatch2)) {
+print "BELLO ", __LINE__, " ", $turnopen,"\n";
+			# Open a new tag and then close the open tag and open a new one for ever further occurrence
+			$x =~ s/(?<!(\/))\s*&gt;&gt;\s+/\n$turnstart/;
+			$x =~ s/(?<!(&quot;|&apos;))\s*&gt;&gt;\s+/\n$turnend$turnstart/g;
+			$x =~ s/(?<!(\/))\s*&gt;&gt;\s+/\n$turnend$turnstart/g;
+			$turnopen = 1;
+		}
+	}
+
+	# Turn boundary EOL
+	if ($turnopen == 1) {
+print "BELLO ", __LINE__, " ", $turnopen,"\n";
+		$x =~ s/(?<!(&quot;|&apos;))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnend$turnstart<ccline/g;
+		$x =~ s/(?<!(\/))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnend$turnstart<ccline/g;
+	}
+	else {
+		my $firstmatch1;
+		my $firstmatch2;
+		my $dotheymatch = 0;
+		if ($x =~ /(?<!(&quot;|&apos;))(?:\s*(&gt;&gt;)\s*)+<ccline/) {
+			$dotheymatch = 1;
+			$firstmatch1 = $-[2];
+		}
+		if ($x =~ /(?<!(\/))(?:\s*(&gt;&gt;)\s*)+<ccline/) {
+			$dotheymatch = 1;
+			$firstmatch2 = $-[2];
+		}
+print "BELLO ", __LINE__, " Firstmatch1 $firstmatch1 Firstmatch2 $firstmatch2\n";
+		if (($dotheymatch == 1) && ($firstmatch1 <= $firstmatch2)) { # equals should not occur, but we'll better treat this case
+			# Open a new tag and then close the open tag and open a new one for ever further occurrence
+print "BELLO ", __LINE__, " ", $turnopen,"\n";
+			$x =~ s/(?<!(&quot;|&apos;))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnstart<ccline/;
+			$x =~ s/(?<!(&quot;|&apos;))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnend$turnstart<ccline/g;
+			$x =~ s/(?<!(\/))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnend$turnstart<ccline/g;
+			$turnopen = 1;
+		}
+		elsif (($dotheymatch == 1) && ($firstmatch1 > $firstmatch2)) {
+print "BELLO ", __LINE__, " ", $turnopen,"\n";
+			# Open a new tag and then close the open tag and open a new one for ever further occurrence
+			$x =~ s/(?<!(\/))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnstart<ccline/;
+			$x =~ s/(?<!(&quot;|&apos;))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnend$turnstart<ccline/g;
+			$x =~ s/(?<!(\/))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnend$turnstart<ccline/g;
+			$turnopen = 1;
+		}
+	}
+
 	# Turn boundary one chevron only
-	$x =~ s/(?<!>)(?:>\s*&gt;\s*)+/>\n<turnboundary \/>/g;
+	if ($turnopen == 1) {
+print "BELLO ", __LINE__, " ", $turnopen,"\n";
+		$x =~ s/(?<!>)(?:>\s*&gt;\s*)+/>\n$turnend$turnstart/g;
+	}
+	else {
+print "BELLO ", __LINE__, " ", $turnopen,"\n";
+		if ($x =~ s/(?<!>)(?:>\s*&gt;\s*)+/>\n$turnstart/) {
+print "BELLO ", __LINE__, " ", $turnopen,"\n";
+			$x =~ s/(?<!>)(?:>\s*&gt;\s*)+/>\n$turnend$turnstart/g;
+			$turnopen = 1;
+		}
+print "BELLO ", __LINE__, " ", $turnopen,"\n";
+	}
 	# Musical Notes:
 	$x =~ s/(♪+)/<musicalnotes value="$1" \/>/g;
 
@@ -113,11 +271,12 @@ while (my $x = <STDIN>) {
 	$linewithoutcctags =~ s/^\s*//;
 	$linewithoutcctags =~ s/\s*$//;
 #	print "XXXXXXXXX", $linewithoutcctags, "\n";
-	if (($linewithoutcctags =~ /<storyboundary \/>/) && ($linewithoutcctags !~ /^<storyboundary \/>/)) {
-		$x =~ s/<storyboundary \/>/\n<storyboundary \/>/;
+	if (($linewithoutcctags =~ /$storystart/) && ($linewithoutcctags !~ /^$storystart/)) {
+		$x =~ s/$storystart/\n$storystart/;
 	}
-	if (($linewithoutcctags =~ /<turnboundary \/>/) && ($linewithoutcctags !~ /^<turnboundary \/>/)) {
-		$x =~ s/<turnboundary \/>/\n<turnboundary \/>/;
+	if (($linewithoutcctags =~ /$turnstart/) && ($linewithoutcctags !~ /^$turnstart/)) {
+print "BELLO ", __LINE__, " ", $turnopen,"\n";
+		$x =~ s/$turnstart/\n$turnstart/;
 	}
 
 	# words with colons
@@ -125,18 +284,26 @@ while (my $x = <STDIN>) {
 		foreach my $match (@matches) {
 			next unless $coldict{$match};
 			if ($coldict{$match}[0] eq "s") { # only the item itself
+				my $closingturn = "";
+print "BELLO ", __LINE__, " ", $turnopen,"\n";
+				if ($turnopen == 1) {
+					$closingturn = $turnend;
+				}
 				if (@{$coldict{$match}} > 1) {
 					my $value = $coldict{$match}[1];
-					$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*/><meta type="speakeridentification" original_value="$1" value="$value" \/>/;
+					$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*/>$closingturn<meta type="speakeridentification" originalvalue="$1" value="$value" \/>$turnstart/;
 				}
 				else {
-					$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*/><meta type="speakeridentification" value="$1" \/>/;
+					$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*/>$closingturn<meta type="speakeridentification" value="$1" \/>$turnstart/;
 				}
+print "BELLO ", __LINE__, " ", $turnopen,"\n";
+				$turnopen = 1;
+print "BELLO ", __LINE__, " ", $turnopen,"\n";
 			}
 			elsif ($coldict{$match}[0] eq "m") { # what comes after it, too
 				my $type;
 				if (@{$coldict{$match}} > 1) {$type = $coldict{$match}[1];} else {$type = $fullvalues{$coldict{$match}[0]};}
-				my $number = $x =~ s/(?<!>)>\s*([A-Za-z]+):\s*([^<]*?)\s*(<\/ccline>\s*<ccline[^>]+>)?\s*([Bb][Yy][^<]*?)<\/ccline>/><meta type="$type" value="$2 $4" \/><\/ccline>/; # This captures a frequent pattern over two cclines. If it fails, we use only the current ccline.
+				my $number = $x =~ s/(?<!>)>\s*([A-Za-z]+):\s*([^<]*?)\s*(<ccline[^>]+>)?\s*([Bb][Yy][^<]*?)<ccline/><meta type="$type" value="$2 $4"><\/meta><ccline/; # This captures a frequent pattern over two cclines. If it fails, we use only the current ccline.
 				if ($number < 1) {$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*([^<]*?)\s*</><meta type="$type" value="$2" \/></;}
 			}
 			elsif (($coldict{$match}[0] eq "t") || ($coldict{$match}[0] eq "a")) { # what comes after it, too
@@ -156,18 +323,25 @@ while (my $x = <STDIN>) {
 
 	if (@matches = $x =~ /(?<!>)>\s*((?:\(|\[)\s*[^[(]*?\s*(?:\]|\)))/g) {
 		foreach my $match (@matches) {
-#			print "BELLO $match\n";
 			next unless $brackdict{$match};
-#			print "BELLO2\n";
 			my $type = $fullvalues{$brackdict{$match}[0]};
 			my $originalvalue = $match;
 			$originalvalue =~ s/^(\(|\[)\s*//;
 			$originalvalue =~ s/\s*(\]|\))$//;
+			my $closingturn = "";
+			my $openingturn = "";
+			if ($type eq "speakeridentification") {
+				if ($turnopen == 1) {
+					$closingturn = $turnend;
+				}
+				$openingturn = $turnstart;
+				$turnopen = 1;
+			}
 			if (@{$brackdict{$match}} > 1) {
 				my $value = $brackdict{$match}[1];
-				$x =~ s/(?<!>)>\s*((?:\(|\[)\s*[^[(]*?\s*(?:\]|\)))/><meta type="$type" originalvalue="$originalvalue" value="$value" \/>/;
+				$x =~ s/(?<!>)>\s*((?:\(|\[)\s*[^[(]*?\s*(?:\]|\)))/>$closingturn<meta type="$type" originalvalue="$originalvalue" value="$value" \/>$openingturn/;
 			} else {
-				$x =~ s/(?<!>)>\s*((?:\(|\[)\s*[^[(]*?\s*(?:\]|\)))/><meta type="$type" value="$originalvalue" \/>/;
+				$x =~ s/(?<!>)>\s*((?:\(|\[)\s*[^[(]*?\s*(?:\]|\)))/>$closingturn<meta type="$type" value="$originalvalue" \/>$openingturn/;
 			}
 		}
 	}
