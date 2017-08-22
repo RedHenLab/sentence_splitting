@@ -11,6 +11,7 @@ my $lastx;
 my $firstrun = 1;
 while (my $x = <STDIN>) {
 	chomp $x;
+	$x =~ s/[^[:print:]]//g; # Remove non-printing characters
 	if ($x eq '<?xml version="1.0" encoding="UTF-8"?>') {
 		print $x;
 		next;

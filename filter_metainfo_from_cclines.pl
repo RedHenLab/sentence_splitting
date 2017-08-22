@@ -82,8 +82,6 @@ my $turnend = "</turn>";
 #my $turnend = "<turn_end />";
 
 
-my $storyopen = 0;
-my $turnopen = 0;
 
 print '<?xml version="1.0" encoding="UTF-8"?>',"\n";
 
@@ -98,19 +96,17 @@ while (my $x = <STDIN>) {
 	$x =~ s/\x0F//g;
 	$x =~ s/\x1B//g;
 	$x =~ s/\x19/&apos;/g;
-	print "BELLO INLINE: $x\n";
+	#print "BELLO INLINE: $x\n";
 
 	# First let's get rid of the first and last line with the text-tags.
 	if ($x =~ /^<\/?text/) {
+		if ($x =~ /<text/) {
+			$x .= $storystart.$turnstart;
+#print "BELLO ", __LINE__, "\n";
+		}
+
 		if ($x =~ /<\/text>/) {
-			if ($turnopen == 1) {
-				$x =~ s/<\/text>/$turnend<\/text>/;
-				$turnopen = 0;
-			}
-			if ($storyopen == 1) {
-				$x =~ s/<\/text>/$storyend<\/text>/;
-				$storyopen = 0;
-			}
+			$x =~ s/<\/text>/$turnend$storyend<\/text>/;
 		}
 		print $x,"\n";
 		next;
@@ -121,147 +117,41 @@ while (my $x = <STDIN>) {
 	my @matches = ();
 
 
-
+#print "BELLO ", __LINE__, "\n";
 	# Story boundary
-	if ($storyopen == 1) {
-		# Close open tag and open a new one for every occurrence
-		$x =~ s/(?<=>)(\s*&gt;&gt;&gt;\s*)+/$storyend$storystart/g;
-	}
-	else {
-		# Open a new tag and then close the open tag and open a new one for ever further occurrence
-		if ($x =~ s/(?<=>)(\s*&gt;&gt;&gt;\s*)+/$storystart/) {
-			$x =~ s/(?<=>)(\s*&gt;&gt;&gt;\s*)+/$storyend$storystart/g;
-			$storyopen = 1;
-		}
-	}
+	# Close open tag and open a new one for every occurrence
+	$x =~ s/(?<=>)(\s*&gt;&gt;&gt;\s*)+/$storyend$storystart/g;
 
+#print "BELLO ", __LINE__, "\n";
 	# Story boundary inline
-	if ($storyopen == 1) {
-		# Close open tag and open a new one for every occurrence
-		$x =~ s/(?<!>)\s*&gt;&gt;&gt;\s+/\n$storyend$storystart/g;
-	}
-	else {
-		# Open a new tag and then close the open tag and open a new one for ever further occurrence
-		if ($x =~ s/(?<!>)\s*&gt;&gt;&gt;\s+/\n$storystart/) {
-			$x =~ s/(?<!>)\s*&gt;&gt;&gt;\s+/\n$storyend$storystart/g;
-			$storyopen = 1;
-		}
-	}
+	# Close open tag and open a new one for every occurrence
+	$x =~ s/(?<!>)\s*&gt;&gt;&gt;\s+/\n$storyend$storystart/g;
 
+#print "BELLO ", __LINE__, "\n";
 	# Story boundary EOL
-	if ($storyopen == 1) {
-		# Close open tag and open a new one for every occurrence
-		$x =~ s/(?<!("|'|\/))(?:\s*&gt;&gt;&gt;\s*)+<ccline/\n$storyend$storystart<ccline/g;
-	}
-	else {
-		# Open a new tag and then close the open tag and open a new one for ever further occurrence
-		if ($x =~ s/(?<!("|'|\/))(?:\s*&gt;&gt;&gt;\s*)+<ccline/\n$storystart<ccline/) {
-			$x =~ s/(?<!("|'|\/))(?:\s*&gt;&gt;&gt;\s*)+<ccline/\n$storyend$storystart<ccline/g;
-			$storyopen = 1;
-		}
-	}
+	# Close open tag and open a new one for every occurrence
+	$x =~ s/(?<!("|'|\/))(?:\s*&gt;&gt;&gt;\s*)+<ccline/\n$storyend$storystart<ccline/g;
+
+#print "BELLO ", __LINE__, "\n";
 	# Turn boundary
-	if ($turnopen == 1) {
-		# Close open tag and open a new one for every occurrence
-		$x =~ s/(?<=>)(\s*&gt;&gt;\s*)+/$turnend$turnstart/g;
-		print "BELLO ", __LINE__, " ", $turnopen,"\n";
-	}
-	else {
-		# Open a new tag and then close the open tag and open a new one for ever further occurrence
-		if ($x =~ s/(?<=>)(\s*&gt;&gt;\s*)+/$turnstart/) {
-			$x =~ s/(?<=>)(\s*&gt;&gt;\s*)+/$turnend$turnstart/g;
-			$turnopen = 1;
-			print "BELLO ", __LINE__, " ", $turnopen,"\n";
-		}
-	}
+	# Close open tag and open a new one for every occurrence
+	$x =~ s/(?<=>)(\s*&gt;&gt;\s*)+/$turnend$turnstart/g;
 
+#print "BELLO ", __LINE__, "\n";
 	# Turn boundary inline
-	if ($turnopen == 1) {
-		$x =~ s/(?<!(&quot;|&apos;))\s*&gt;&gt;\s+/\n$turnend$turnstart/g;
-		$x =~ s/(?<!(\/))\s*&gt;&gt;\s+/\n$turnend$turnstart/g;
-	}
-	else {
-		my $firstmatch1;
-		my $firstmatch2;
-		my $dotheymatch = 0;
-		if ($x =~ /(?<!(&quot;|&apos;))\s*(&gt;&gt;)\s+/) {
-			$dotheymatch = 1;
-			$firstmatch1 = $-[2];
-		}
-		if ($x =~ /(?<!(\/))\s*(&gt;&gt;)\s+/) {
-			$dotheymatch = 1;
-			$firstmatch2 = $-[2];
-		}
-print "BELLO ", __LINE__, " Firstmatch1 $firstmatch1 Firstmatch2 $firstmatch2\n";
-		if (($dotheymatch == 1) && ($firstmatch1 <= $firstmatch2)) { # equals should not occur, but we'll better treat this case
-print "BELLO ", __LINE__, " ", $turnopen,"\n";
-			# Open a new tag and then close the open tag and open a new one for ever further occurrence
-			$x =~ s/(?<!(&quot;|&apos;))\s*&gt;&gt;\s+/\n$turnstart/;
-			$x =~ s/(?<!(&quot;|&apos;))\s*&gt;&gt;\s+/\n$turnend$turnstart/g;
-			$x =~ s/(?<!(\/))\s*&gt;&gt;\s+/\n$turnend$turnstart/g;
-			$turnopen = 1;
-		}
-		elsif (($dotheymatch == 1) && ($firstmatch1 > $firstmatch2)) {
-print "BELLO ", __LINE__, " ", $turnopen,"\n";
-			# Open a new tag and then close the open tag and open a new one for ever further occurrence
-			$x =~ s/(?<!(\/))\s*&gt;&gt;\s+/\n$turnstart/;
-			$x =~ s/(?<!(&quot;|&apos;))\s*&gt;&gt;\s+/\n$turnend$turnstart/g;
-			$x =~ s/(?<!(\/))\s*&gt;&gt;\s+/\n$turnend$turnstart/g;
-			$turnopen = 1;
-		}
-	}
+	$x =~ s/(?<!(&quot;|&apos;))\s*&gt;&gt;\s+/\n$turnend$turnstart/g;
+	$x =~ s/(?<!(\/))\s*&gt;&gt;\s+/\n$turnend$turnstart/g;
 
+#print "BELLO ", __LINE__, "\n";
 	# Turn boundary EOL
-	if ($turnopen == 1) {
-print "BELLO ", __LINE__, " ", $turnopen,"\n";
-		$x =~ s/(?<!(&quot;|&apos;))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnend$turnstart<ccline/g;
-		$x =~ s/(?<!(\/))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnend$turnstart<ccline/g;
-	}
-	else {
-		my $firstmatch1;
-		my $firstmatch2;
-		my $dotheymatch = 0;
-		if ($x =~ /(?<!(&quot;|&apos;))(?:\s*(&gt;&gt;)\s*)+<ccline/) {
-			$dotheymatch = 1;
-			$firstmatch1 = $-[2];
-		}
-		if ($x =~ /(?<!(\/))(?:\s*(&gt;&gt;)\s*)+<ccline/) {
-			$dotheymatch = 1;
-			$firstmatch2 = $-[2];
-		}
-print "BELLO ", __LINE__, " Firstmatch1 $firstmatch1 Firstmatch2 $firstmatch2\n";
-		if (($dotheymatch == 1) && ($firstmatch1 <= $firstmatch2)) { # equals should not occur, but we'll better treat this case
-			# Open a new tag and then close the open tag and open a new one for ever further occurrence
-print "BELLO ", __LINE__, " ", $turnopen,"\n";
-			$x =~ s/(?<!(&quot;|&apos;))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnstart<ccline/;
-			$x =~ s/(?<!(&quot;|&apos;))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnend$turnstart<ccline/g;
-			$x =~ s/(?<!(\/))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnend$turnstart<ccline/g;
-			$turnopen = 1;
-		}
-		elsif (($dotheymatch == 1) && ($firstmatch1 > $firstmatch2)) {
-print "BELLO ", __LINE__, " ", $turnopen,"\n";
-			# Open a new tag and then close the open tag and open a new one for ever further occurrence
-			$x =~ s/(?<!(\/))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnstart<ccline/;
-			$x =~ s/(?<!(&quot;|&apos;))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnend$turnstart<ccline/g;
-			$x =~ s/(?<!(\/))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnend$turnstart<ccline/g;
-			$turnopen = 1;
-		}
-	}
+	$x =~ s/(?<!(&quot;|&apos;))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnend$turnstart<ccline/g;
+	$x =~ s/(?<!(\/))(?:\s*&gt;&gt;\s*)+<ccline/\n$turnend$turnstart<ccline/g;
 
+#print "BELLO ", __LINE__, "\n";
 	# Turn boundary one chevron only
-	if ($turnopen == 1) {
-print "BELLO ", __LINE__, " ", $turnopen,"\n";
-		$x =~ s/(?<!>)(?:>\s*&gt;\s*)+/>\n$turnend$turnstart/g;
-	}
-	else {
-print "BELLO ", __LINE__, " ", $turnopen,"\n";
-		if ($x =~ s/(?<!>)(?:>\s*&gt;\s*)+/>\n$turnstart/) {
-print "BELLO ", __LINE__, " ", $turnopen,"\n";
-			$x =~ s/(?<!>)(?:>\s*&gt;\s*)+/>\n$turnend$turnstart/g;
-			$turnopen = 1;
-		}
-print "BELLO ", __LINE__, " ", $turnopen,"\n";
-	}
+	$x =~ s/(?<!>)(?:>\s*&gt;\s*)+/>\n$turnend$turnstart/g;
+
+#print "BELLO ", __LINE__, "\n";
 	# Musical Notes:
 	$x =~ s/(♪+)/<musicalnotes value="$1" \/>/g;
 
@@ -272,10 +162,11 @@ print "BELLO ", __LINE__, " ", $turnopen,"\n";
 	$linewithoutcctags =~ s/\s*$//;
 #	print "XXXXXXXXX", $linewithoutcctags, "\n";
 	if (($linewithoutcctags =~ /$storystart/) && ($linewithoutcctags !~ /^$storystart/)) {
+#print "BELLO ", __LINE__, "\n";
 		$x =~ s/$storystart/\n$storystart/;
 	}
 	if (($linewithoutcctags =~ /$turnstart/) && ($linewithoutcctags !~ /^$turnstart/)) {
-print "BELLO ", __LINE__, " ", $turnopen,"\n";
+#print "BELLO ", __LINE__, "\n";
 		$x =~ s/$turnstart/\n$turnstart/;
 	}
 
@@ -284,33 +175,29 @@ print "BELLO ", __LINE__, " ", $turnopen,"\n";
 		foreach my $match (@matches) {
 			next unless $coldict{$match};
 			if ($coldict{$match}[0] eq "s") { # only the item itself
-				my $closingturn = "";
-print "BELLO ", __LINE__, " ", $turnopen,"\n";
-				if ($turnopen == 1) {
-					$closingturn = $turnend;
-				}
 				if (@{$coldict{$match}} > 1) {
 					my $value = $coldict{$match}[1];
-					$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*/>$closingturn<meta type="speakeridentification" originalvalue="$1" value="$value" \/>$turnstart/;
+					$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*/>$turnend<meta type="speakeridentification" originalvalue="$1" value="$value" \/>$turnstart/;
+#print "BELLO ", __LINE__, "\n";
 				}
 				else {
-					$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*/>$closingturn<meta type="speakeridentification" value="$1" \/>$turnstart/;
+					$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*/>$turnend<meta type="speakeridentification" value="$1" \/>$turnstart/;
+#print "BELLO ", __LINE__, "\n";
 				}
-print "BELLO ", __LINE__, " ", $turnopen,"\n";
-				$turnopen = 1;
-print "BELLO ", __LINE__, " ", $turnopen,"\n";
 			}
 			elsif ($coldict{$match}[0] eq "m") { # what comes after it, too
 				my $type;
 				if (@{$coldict{$match}} > 1) {$type = $coldict{$match}[1];} else {$type = $fullvalues{$coldict{$match}[0]};}
-				my $number = $x =~ s/(?<!>)>\s*([A-Za-z]+):\s*([^<]*?)\s*(<ccline[^>]+>)?\s*([Bb][Yy][^<]*?)<ccline/><meta type="$type" value="$2 $4"><\/meta><ccline/; # This captures a frequent pattern over two cclines. If it fails, we use only the current ccline.
+				my $number = $x =~ s/(?<!>)>\s*([A-Za-z]+):\s*([^<]*?)\s*(<ccline[^>]+>)?\s*([Bb][Yy][^<]*?)<ccline/><meta type="$type" value="$2 $4" \/><ccline/; # This captures a frequent pattern over two cclines. If it fails, we use only the current ccline.
 				if ($number < 1) {$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*([^<]*?)\s*</><meta type="$type" value="$2" \/></;}
+#print "BELLO ", __LINE__, "\n";
 			}
 			elsif (($coldict{$match}[0] eq "t") || ($coldict{$match}[0] eq "a")) { # what comes after it, too
 				my $type = $fullvalues{$coldict{$match}[0]};
 				my $description;
 				if (@{$coldict{$match}} > 1) {$description = $coldict{$match}[1];} else {$description = $match;}
 				$x =~ s/(?<!>)>\s*([A-Za-z]+):\s*(.*?)\s*</><meta type="$type" description="$description" value="$2" \/></;
+#print "BELLO ", __LINE__, "\n";
 			}
 		}
 	}
@@ -331,17 +218,17 @@ print "BELLO ", __LINE__, " ", $turnopen,"\n";
 			my $closingturn = "";
 			my $openingturn = "";
 			if ($type eq "speakeridentification") {
-				if ($turnopen == 1) {
-					$closingturn = $turnend;
-				}
+				$closingturn = $turnend;
 				$openingturn = $turnstart;
-				$turnopen = 1;
+#print "BELLO ", __LINE__, "\n";
 			}
 			if (@{$brackdict{$match}} > 1) {
 				my $value = $brackdict{$match}[1];
 				$x =~ s/(?<!>)>\s*((?:\(|\[)\s*[^[(]*?\s*(?:\]|\)))/>$closingturn<meta type="$type" originalvalue="$originalvalue" value="$value" \/>$openingturn/;
+#print "BELLO ", __LINE__, "\n";
 			} else {
 				$x =~ s/(?<!>)>\s*((?:\(|\[)\s*[^[(]*?\s*(?:\]|\)))/>$closingturn<meta type="$type" value="$originalvalue" \/>$openingturn/;
+#print "BELLO ", __LINE__, "\n";
 			}
 		}
 	}
