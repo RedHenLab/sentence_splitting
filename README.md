@@ -11,7 +11,7 @@ The output is a well-formed XML file that contains exactly one sentence per line
 
 To check that the file is ok, it can be tested with
 ```bash
-xmllint --nouout outputfile.xml
+xmllint --noout outputfile.xml
 ```
 
 If this command terminates without printing an error message, the file is well-formed XML.
