@@ -6,19 +6,21 @@ import os
 import os.path
 import re
 import sys
-#import csv # Added by pgu
-import pprint # Added by pgu
+# import csv # Added by pgu
+import pprint  # Added by pgu
 from datetime import datetime, date, time, timedelta
 
 
 def command_line_arguments():
     """Create argparse object"""
     parser = argparse.ArgumentParser(description="Do sentence splitting on the given file.")
-    parser.add_argument("-a", type=os.path.abspath, required=True, help="Directory with abbreviation files of format .+\..{2} where the last two characters indicate a language")
+    parser.add_argument("-a", type=os.path.abspath, required=True,
+                        help="Directory with abbreviation files of format .+\..{2} where the last two characters indicate a language")
     parser.add_argument("-l", type=str, help="Two-letter language code; defaults to 'en'")
     parser.add_argument("FILE", type=argparse.FileType("r"), help="Newsscape capture text file")
     args = parser.parse_args()
     return args
+
 
 def xmlescape(x):
     x = re.sub(r'&', '&amp;', x);
@@ -27,6 +29,7 @@ def xmlescape(x):
     x = re.sub(r'>', '&gt;', x);
     x = re.sub(r'<', '&lt;', x);
     return x
+
 
 def xmlunescape(x):
     x = re.sub('&quot;', r'"', x);
@@ -63,6 +66,7 @@ def load_words_with_colons_dictionary():
 #    pp.pprint(words_with_colons_)
     return words_with_colons_dictionary
 """
+
 
 def load_abbreviations(directory):
     """Read in abbreviation files."""
@@ -122,12 +126,14 @@ def check_normal_case_sentences(sentences, abbreviations, language):
                 # if word starts with a capital letter, it might be
                 # the beginning of a new sentence
                 if word_starts_uc:
-                    previous_word_ends_with_period_only = previous_word.endswith(".") and not previous_word.endswith("...")
+                    previous_word_ends_with_period_only = previous_word.endswith(".") and not previous_word.endswith(
+                        "...")
                     previous_word_ends_with_period_and_more = re.search(r"(?<!\.\.)\.[])}'\"“”‘’]+$", previous_word)
                     previous_word_ends_with_other_punct = re.search(r"[?!][])}'\"“”‘’]*$", previous_word)
                     if previous_word_ends_with_period_only:
                         previous_word_wo_punc = re.sub(r"\.[])}'\"“”‘’]*$", "", previous_word)
-                        previous_word_is_abbreviation = is_abbreviation(previous_word_wo_punc, word, abbreviations, language)
+                        previous_word_is_abbreviation = is_abbreviation(previous_word_wo_punc, word, abbreviations,
+                                                                        language)
                         if previous_word_is_abbreviation:
                             new_sentences[-1].append(word)
                         else:
@@ -158,7 +164,7 @@ def _check_end_of_lines(text, timestamps, line_lengths, max_line_length, boundar
         line = line.lstrip()
         escapedline = xmlescape(line);
         tagged_line = '<ccline start="%s" end="%s" />%s' % (timestamp[0], timestamp[1], escapedline)
-#        closing_tag = "</ccline>"
+        #        closing_tag = "</ccline>"
         closing_tag = ""
         # skip empty lines
         if line == "":
@@ -215,6 +221,42 @@ def _check_end_of_lines(text, timestamps, line_lengths, max_line_length, boundar
     return sentences
 
 
+def extract_captioning(text):
+        pattern = re.compile(r"((.+)?(Caption(?:ing|ed))((?:(?!by).)*(by)?(.+)?))", re.IGNORECASE)
+        pattern_by = re.compile(r"by", re.IGNORECASE)
+        pattern_web_address = re.compile(r"(?:\w+(\.|@)){2,}\w+")
+        pattern_and = re.compile(r"and.*", re.IGNORECASE)
+
+        captioning_content = []
+        line_numbers_with_caption = []
+        for i, line in enumerate(text):
+            match = re.match(pattern, line)
+            if match is None:
+                continue
+            contains_a_by = match.group(5) is not None
+            ends_with_by = contains_a_by and (match.group(6) is None or match.group(6).strip() == "")
+            has_next_line = len(text) > i + 1
+            next_line_starts_with_by = has_next_line and re.match(pattern_by, text[i+1]) is not None
+            next_line_starts_with_and = has_next_line and re.match(pattern_and, text[i+1]) is not None
+            if not contains_a_by and not next_line_starts_with_by:
+                continue    # is the word captioning or captioned within the normal story
+            captioning_content.append(line)
+            line_numbers_with_caption.append(i)
+            used_lines = 1
+            if ends_with_by or next_line_starts_with_by or (contains_a_by and next_line_starts_with_and):
+                captioning_content.append(text[i+used_lines])   # next line is still captioning because of by or and
+                line_numbers_with_caption.append(i+used_lines)
+                used_lines += 1
+            if len(text) > i + used_lines and re.match(pattern_web_address, text[i+used_lines]):
+                captioning_content.append(text[i+used_lines])  # add web address
+                line_numbers_with_caption.append(i+used_lines)
+        for i in reversed(line_numbers_with_caption):
+            del text[i]
+        captioning_tag = '<meta type="caption_credits" value="{}"/>'.format(" ".join(captioning_content)) \
+            if len(captioning_content) > 0 else None
+        return text, captioning_tag
+
+
 def split_into_sentences(text, timestamps, abbreviations, language="en"):
     """Split text into sentences, considering language."""
     # one line can have a maximum of 32 characters
@@ -227,10 +269,15 @@ def split_into_sentences(text, timestamps, abbreviations, language="en"):
     # lengths
     text = [l.rstrip() for l in text]
     line_lengths = [len(l) for l in text]
+    text, captioning_tag = extract_captioning(text)
+
     # punctuation at the end of a line
-    sentences = _check_end_of_lines(text, timestamps, line_lengths, max_line_length, boundaries, abbreviations, language)
+    sentences = _check_end_of_lines(text, timestamps, line_lengths, max_line_length, boundaries, abbreviations,
+                                    language)
     # punctuation in the middle of a line
     # ...
+    if captioning_tag is not None:
+        sentences.insert(0, captioning_tag)
     return sentences
 
 
@@ -238,8 +285,10 @@ def parse_capture_file(file_object, abbreviations):
     """Parse the capture file, i.e. identify meta data, time stamps,
     etc."""
     timestamp_re = re.compile(r"^\d{14}\.\d{3}$")
-	# changed one_field_metadata and two_field_metadata since that is not a sensible distinction (there may be one or two field in VID, for instance)
-    file_level_metadata = set(["TOP", "COL", "UID", "PID", "ACQ", "DUR", "VID", "TTL", "URL", "TTS", "SRC", "CMT", "LAN", "TTP", "HED", "OBT", "LBT", "END"])
+    # changed one_field_metadata and two_field_metadata since that is not a sensible distinction (there may be one or two field in VID, for instance)
+    file_level_metadata = set(
+        ["TOP", "COL", "UID", "PID", "ACQ", "DUR", "VID", "TTL", "URL", "TTS", "SRC", "CMT", "LAN", "TTP", "HED", "OBT",
+         "LBT", "END"])
     text = []
     timestamps = []
     sentences = []
@@ -252,17 +301,25 @@ def parse_capture_file(file_object, abbreviations):
     local_broadcast_date = "N/A"
     local_broadcast_time = "N/A"
     local_broadcast_timezone = "N/A"
+    opened_segment = None
+    segment_type = "story_start"
     for line in file_object:
         line = line.strip()
         fields = line.split("|")
         if timestamp_re.search(fields[0]):
-            if fields[2] == "SEG":
-                sentences.extend(split_into_sentences(text, timestamps, abbreviations))
+            if fields[2].startswith("SEG"):
+                new_sentences = split_into_sentences(text, timestamps, abbreviations)
+                add_segment_tag(opened_segment, new_sentences)
+                sentences.extend(new_sentences)
                 text = []
                 timestamps = []
-            elif fields[2] == "CC1" or fields[2] == "CCO" or fields[2] == "TR0" or fields[2] == "TR1":# Verify this is doing the right thing...
+                if len(fields) > 3:
+                    segment_type = fields[3].split("=")[-1]
+            elif fields[2] == "CC1" or fields[2] == "CCO" or fields[2] == "TR0" or fields[
+                2] == "TR1":  # Verify this is doing the right thing...
                 text.extend(fields[3:])
                 timestamps.append(fields[0:2])
+            opened_segment = '\n<segment type="{}">\n'.format(segment_type.lower().replace(" ", "_"))
         elif fields[0] in file_level_metadata:
             if fields[0] == "TOP":
                 timestamp = fields[1]
@@ -272,7 +329,7 @@ def parse_capture_file(file_object, abbreviations):
                 thetime = topfields.pop(0)
                 d = date(int(datefields[0]), int(datefields[1]), int(datefields[2]))
                 t = time(int(fields[1][8:10]), int(fields[1][10:12]), int(fields[1][12:14]))
-                filestartdatetime = datetime.combine(d,t)
+                filestartdatetime = datetime.combine(d, t)
                 country = topfields.pop(0)
                 channel = topfields.pop(0)
                 channel = re.sub(r"[^A-Za-z0-9]", "_", channel)
@@ -285,7 +342,7 @@ def parse_capture_file(file_object, abbreviations):
             if fields[0] == "PID":
                 program_id = xmlescape(fields[1])
             if fields[0] == "ACQ":
-                pass # NO SUCH THING??? -> Would like to know the format. acquisition_time = fields[1]; But what if it is date and time?
+                pass  # NO SUCH THING??? -> Would like to know the format. acquisition_time = fields[1]; But what if it is date and time?
             if fields[0] == "DUR":
                 duration = xmlescape(fields[1])
             if fields[0] == "VID":
@@ -318,7 +375,8 @@ def parse_capture_file(file_object, abbreviations):
                     pass
                 except IndexError:
                     try:
-                        original_broadcast_date, original_broadcast_time, original_broadcast_timezone = fields[1].split(" ")
+                        original_broadcast_date, original_broadcast_time, original_broadcast_timezone = fields[1].split(
+                            " ")
                     except ValueError:
                         pass
                 else:
@@ -329,9 +387,14 @@ def parse_capture_file(file_object, abbreviations):
                 except ValueError:
                     pass
             if fields[0] == "END":
-                sentences.extend(split_into_sentences(text, timestamps, abbreviations))
+                new_sentences = split_into_sentences(text, timestamps, abbreviations)
+                add_segment_tag(opened_segment, new_sentences)
+                sentences.extend(new_sentences)
                 text = []
-    sys.stdout.write("<text id=\"t__%s\" collection=\"%s\" file=\"%s\" date=\"%s\" year=\"%s\" month=\"%s\" day=\"%s\" time=\"%s\" duration=\"%s\" country=\"%s\" channel=\"%s\" title=\"%s\" video_resolution=\"%s\"" % (uid, collection, file_object.name, thedate, datefields[0], datefields[1], datefields[2], thetime, duration, country, channel, title, video_resolution))
+    sys.stdout.write(
+        "<text id=\"t__%s\" collection=\"%s\" file=\"%s\" date=\"%s\" year=\"%s\" month=\"%s\" day=\"%s\" time=\"%s\" duration=\"%s\" country=\"%s\" channel=\"%s\" title=\"%s\" video_resolution=\"%s\"" % (
+        uid, collection, file_object.name, thedate, datefields[0], datefields[1], datefields[2], thetime, duration,
+        country, channel, title, video_resolution))
     try:
         video_resolution_original
     except NameError:
@@ -400,7 +463,9 @@ def parse_capture_file(file_object, abbreviations):
     except NameError:
         pass
     else:
-        sys.stdout.write(" original_broadcast_date=\"%s\" original_broadcast_time=\"%s\" original_broadcast_timezone=\"%s\"" % (original_broadcast_date, original_broadcast_time, original_broadcast_timezone))
+        sys.stdout.write(
+            " original_broadcast_date=\"%s\" original_broadcast_time=\"%s\" original_broadcast_timezone=\"%s\"" % (
+            original_broadcast_date, original_broadcast_time, original_broadcast_timezone))
 
     try:
         original_broadcast_estimated
@@ -414,9 +479,10 @@ def parse_capture_file(file_object, abbreviations):
     except NameError:
         pass
     else:
-        sys.stdout.write(" local_broadcast_date=\"%s\" local_broadcast_time=\"%s\" local_broadcast_timezone=\"%s\"" % (local_broadcast_date, local_broadcast_time, local_broadcast_timezone))
+        sys.stdout.write(" local_broadcast_date=\"%s\" local_broadcast_time=\"%s\" local_broadcast_timezone=\"%s\"" % (
+        local_broadcast_date, local_broadcast_time, local_broadcast_timezone))
 
-    sys.stdout.write(">\n")
+    sys.stdout.write(">")
     """    storyboundary = re.compile(r'(?<=>)(\s*>>>\s*)+')
     storyboundaryeol = re.compile(r'(?<!("|\'|/))(?:\s*>>>\s*)+</ccline')
     turnboundary = re.compile(r'(?<=>)(\s*>>\s*)+')
@@ -488,11 +554,17 @@ def parse_capture_file(file_object, abbreviations):
     print("</text>")
 
 
+def add_segment_tag(opened_segment, new_sentences):
+    new_sentences[0] = opened_segment + new_sentences[0]
+    new_sentences[-1] += '\n</segment>'
+    return new_sentences
+
+
 def main():
     """Main function"""
     args = command_line_arguments()
-#    bracket_dictionary = load_bracket_dictionary()
-#    words_with_colons_dictionary = load_words_with_colons_dictionary()
+    #    bracket_dictionary = load_bracket_dictionary()
+    #    words_with_colons_dictionary = load_words_with_colons_dictionary()
     abbreviations = load_abbreviations(args.a)
     sys.stderr.write("Processing " + args.FILE.name + "\n")
     parse_capture_file(args.FILE, abbreviations)
