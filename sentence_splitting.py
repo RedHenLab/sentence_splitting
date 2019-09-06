@@ -224,7 +224,7 @@ def _check_end_of_lines(text, timestamps, line_lengths, max_line_length, boundar
 def extract_captioning(text):
         pattern = re.compile(r"((.+)?(Caption(?:ing|ed))((?:(?!by).)*(by)?(.+)?))", re.IGNORECASE)
         pattern_by = re.compile(r"by", re.IGNORECASE)
-        pattern_web_address = re.compile(r"(?:\w+(\.|@)){2,}\w+")
+        pattern_web_address = re.compile(r"[\t ]*(?:\w+([.@])){2,}\w+")
         pattern_and = re.compile(r"and.*", re.IGNORECASE)
 
         captioning_content = []
@@ -252,7 +252,7 @@ def extract_captioning(text):
                 line_numbers_with_caption.append(i+used_lines)
         for i in reversed(line_numbers_with_caption):
             del text[i]
-        captioning_tag = '<meta type="caption_credits" value="{}"/>'.format(" ".join(captioning_content)) \
+        captioning_tag = '<meta type="caption_credits" value="{}"/>'.format(" ".join(captioning_content).strip(" []\t")) \
             if len(captioning_content) > 0 else None
         return text, captioning_tag
 

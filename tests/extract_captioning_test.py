@@ -32,7 +32,7 @@ class ExtractCaptioningTest(unittest.TestCase):
         self.assertEqual(None, captioning_tag)
 
     def test_with_web_address(self):
-        text = ["Captioning funded by CBS", "and Ford.", "cbs.ford.de", ">> Whitaker: THIS WAS THE FIRST"]
+        text = ["Captioning funded by CBS", "and Ford.", "      cbs.ford.de", ">> Whitaker: THIS WAS THE FIRST"]
         text, captioning_tag = extract_captioning(text)
         print(captioning_tag)
         self.assertEqual([">> Whitaker: THIS WAS THE FIRST"], text)
