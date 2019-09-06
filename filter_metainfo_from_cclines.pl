@@ -86,7 +86,6 @@ my $turnend = "</turn>";
 print '<?xml version="1.0" encoding="UTF-8"?>',"\n";
 
 # MAIN LOOP
-
 while (my $x = <STDIN>) {
 	chomp $x;
 	$x =~ s/\x00//g;
@@ -98,15 +97,15 @@ while (my $x = <STDIN>) {
 	$x =~ s/\x19/&apos;/g;
 	#print "BELLO INLINE: $x\n";
 
-	# First let's get rid of the first and last line with the text-tags.
-	if ($x =~ /^<\/?text/) {
-		if ($x =~ /<text/) {
-			$x .= $storystart.$turnstart;
+	# Add turn tags after opening and before closing segment
+	if ($x =~ /^<\/?segment/) {
+		if ($x =~ /<segment/) {
+			$x .= $turnstart;
 #print "BELLO ", __LINE__, "\n";
 		}
 
-		if ($x =~ /<\/text>/) {
-			$x =~ s/<\/text>/$turnend$storyend<\/text>/;
+		if ($x =~ /<\/segment>/) {
+			$x =~ s/<\/segment>/$turnend<\/segment>/;
 		}
 		print $x,"\n";
 		next;
