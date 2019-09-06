@@ -240,15 +240,15 @@ def extract_captioning(text):
             next_line_starts_with_and = has_next_line and re.match(pattern_and, text[i+1]) is not None
             if not contains_a_by and not next_line_starts_with_by:
                 continue    # is the word captioning or captioned within the normal story
-            captioning_content.append(line)
+            captioning_content.append(line.strip())
             line_numbers_with_caption.append(i)
             used_lines = 1
             if ends_with_by or next_line_starts_with_by or (contains_a_by and next_line_starts_with_and):
-                captioning_content.append(text[i+used_lines])   # next line is still captioning because of by or and
+                captioning_content.append(text[i+used_lines].strip())   # next line is still captioning because of by or and
                 line_numbers_with_caption.append(i+used_lines)
                 used_lines += 1
             if len(text) > i + used_lines and re.match(pattern_web_address, text[i+used_lines]):
-                captioning_content.append(text[i+used_lines])  # add web address
+                captioning_content.append(text[i+used_lines].strip())  # add web address
                 line_numbers_with_caption.append(i+used_lines)
         for i in reversed(line_numbers_with_caption):
             del text[i]
@@ -555,6 +555,8 @@ def parse_capture_file(file_object, abbreviations):
 
 
 def add_segment_tag(opened_segment, new_sentences):
+    if len(new_sentences) == 0:
+        new_sentences = [""]
     new_sentences[0] = opened_segment + new_sentences[0]
     new_sentences[-1] += '\n</segment>'
     return new_sentences
