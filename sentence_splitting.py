@@ -9,6 +9,7 @@ import sys
 # import csv # Added by pgu
 import pprint  # Added by pgu
 from datetime import datetime, date, time, timedelta
+from fuzzywuzzy import process as fuzzy
 
 
 def command_line_arguments():
@@ -16,6 +17,8 @@ def command_line_arguments():
     parser = argparse.ArgumentParser(description="Do sentence splitting on the given file.")
     parser.add_argument("-a", type=os.path.abspath, required=True,
                         help="Directory with abbreviation files of format .+\..{2} where the last two characters indicate a language")
+    parser.add_argument("-c", type=argparse.FileType("r"), required=False,
+                        help="File with special captioning lines")
     parser.add_argument("-l", type=str, help="Two-letter language code; defaults to 'en'")
     parser.add_argument("FILE", type=argparse.FileType("r"), help="Newsscape capture text file")
     args = parser.parse_args()
@@ -88,6 +91,22 @@ def load_abbreviations(directory):
         assert len(abbreviations[language]["regular"] & abbreviations[language]["no_boundary"]) == 0
         assert len(abbreviations[language]["numeric"] & abbreviations[language]["no_boundary"]) == 0
     return abbreviations
+
+
+def load_captioning_specials(captioning_file):
+    """Read in captioning_specials file"""
+    captioning_specials = {}
+    if captioning_file is None:
+        return captioning_specials
+    for line in captioning_file:
+        parent_dict = captioning_specials
+        split = line.strip().split("\t")
+        for s in split:
+            if s not in parent_dict:
+                s = s.strip()
+                parent_dict[s] = {}
+                parent_dict = parent_dict[s]
+    return captioning_specials
 
 
 def is_abbreviation(word, next_word, abbreviations, language):
@@ -221,43 +240,82 @@ def _check_end_of_lines(text, timestamps, line_lengths, max_line_length, boundar
     return sentences
 
 
-def extract_captioning(text):
-        pattern = re.compile(r"((.+)?(Caption(?:ing|ed))((?:(?!by).)*(by)?(.+)?))", re.IGNORECASE)
-        pattern_by = re.compile(r"by", re.IGNORECASE)
-        pattern_web_address = re.compile(r"[\t ]*(?:\w+([.@])){2,}\w+")
-        pattern_and = re.compile(r"and.*", re.IGNORECASE)
+def get_fuzzy_key(key, dictionary, min_accuracy=95):
+    """Gets the most matching key in the dictionary if its accuracy is at least min_accuracy else None"""
+    possible_keys = fuzzy.extract(key, dictionary.keys(), limit=1)
+    if len(possible_keys) == 0:
+        return None
+    fuzzy_key, accuracy = possible_keys[0]
+    if accuracy >= min_accuracy:
+        return fuzzy_key
+    return None
 
-        captioning_content = []
-        line_numbers_with_caption = []
-        for i, line in enumerate(text):
-            match = re.match(pattern, line)
-            if match is None:
-                continue
-            contains_a_by = match.group(5) is not None
-            ends_with_by = contains_a_by and (match.group(6) is None or match.group(6).strip() == "")
-            has_next_line = len(text) > i + 1
-            next_line_starts_with_by = has_next_line and re.match(pattern_by, text[i+1]) is not None
-            next_line_starts_with_and = has_next_line and re.match(pattern_and, text[i+1]) is not None
-            if not contains_a_by and not next_line_starts_with_by:
-                continue    # is the word captioning or captioned within the normal story
+
+def extract_captioning(text, specials):
+    """Deletes captioning lines and adds their content to a returned captioning tag"""
+    pattern = re.compile(r"((.+)?(Caption(?:ing|ed))((?:(?!by).)*(by)?(.+)?))", re.IGNORECASE)
+    pattern_by = re.compile(r"by", re.IGNORECASE)
+    pattern_web_address = re.compile(r"[\t ]*(?:\w+([.@])){2,}\w+")
+    pattern_and = re.compile(r"and.*", re.IGNORECASE)
+
+    captioning_content = []
+    line_numbers_with_caption = []
+    left_special_lines = 0
+    for i, line in enumerate(text):
+        if left_special_lines == 0:
+            left_special_lines = number_of_following_special_lines(i, left_special_lines, line, specials, text)
+        # check if the line and the following ones match any captioning_special
+        # if the line belongs to the found captioning_special lines
+        if left_special_lines > 0:
             captioning_content.append(line.strip())
             line_numbers_with_caption.append(i)
-            used_lines = 1
-            if ends_with_by or next_line_starts_with_by or (contains_a_by and next_line_starts_with_and):
-                captioning_content.append(text[i+used_lines].strip())   # next line is still captioning because of by or and
-                line_numbers_with_caption.append(i+used_lines)
-                used_lines += 1
-            if len(text) > i + used_lines and re.match(pattern_web_address, text[i+used_lines]):
-                captioning_content.append(text[i+used_lines].strip())  # add web address
-                line_numbers_with_caption.append(i+used_lines)
-        for i in reversed(line_numbers_with_caption):
-            del text[i]
-        captioning_tag = '<meta type="caption_credits" value="{}"/>'.format(" ".join(captioning_content).strip(" []\t")) \
-            if len(captioning_content) > 0 else None
-        return text, captioning_tag
+            left_special_lines -= 1
+            continue
+        # use the regex patterns to determine if a captioning is found
+        match = re.match(pattern, line)
+        if match is None:
+            continue
+        contains_a_by = match.group(5) is not None
+        ends_with_by = contains_a_by and (match.group(6) is None or match.group(6).strip() == "")
+        has_next_line = len(text) > i + 1
+        next_line_starts_with_by = has_next_line and re.match(pattern_by, text[i+1]) is not None
+        next_line_starts_with_and = has_next_line and re.match(pattern_and, text[i+1]) is not None
+        if not contains_a_by and not next_line_starts_with_by:
+            continue    # is the word captioning or captioned within the normal story
+        captioning_content.append(line.strip())
+        line_numbers_with_caption.append(i)
+        used_lines = 1
+        if ends_with_by or next_line_starts_with_by or (contains_a_by and next_line_starts_with_and):
+            captioning_content.append(text[i+used_lines].strip())   # next line is still captioning because of by or and
+            line_numbers_with_caption.append(i+used_lines)
+            used_lines += 1
+        if len(text) > i + used_lines and re.match(pattern_web_address, text[i+used_lines]):
+            captioning_content.append(text[i+used_lines].strip())  # add web address
+            line_numbers_with_caption.append(i+used_lines)
+
+    for i in reversed(line_numbers_with_caption):  # delete the captioning lines from text
+        del text[i]
+    # create the captioning tag
+    captioning_tag = '<meta type="caption_credits" value="{}"/>'.format(" ".join(captioning_content).strip(" []\t")) \
+        if len(captioning_content) > 0 else None
+    return text, captioning_tag
 
 
-def split_into_sentences(text, timestamps, abbreviations, language="en"):
+def number_of_following_special_lines(i, left_special_lines, line, specials, text):
+    fuzzy_key_line = get_fuzzy_key(line.strip(), specials)
+    if fuzzy_key_line is not None:
+        special_parent = specials
+        for j, l in enumerate(text[i:]):
+            fuzzy_key_l = get_fuzzy_key(l.strip(), special_parent)
+            if fuzzy_key_l is None:
+                break
+            if len(special_parent[fuzzy_key_l]) == 0:
+                left_special_lines = j + 1
+            special_parent = special_parent[fuzzy_key_l]
+    return left_special_lines
+
+
+def split_into_sentences(text, timestamps, abbreviations, captioning_specials, language="en"):
     """Split text into sentences, considering language."""
     # one line can have a maximum of 32 characters
     max_line_length = 32
@@ -269,7 +327,7 @@ def split_into_sentences(text, timestamps, abbreviations, language="en"):
     # lengths
     text = [l.rstrip() for l in text]
     line_lengths = [len(l) for l in text]
-    text, captioning_tag = extract_captioning(text)
+    text, captioning_tag = extract_captioning(text, captioning_specials)
 
     # punctuation at the end of a line
     sentences = _check_end_of_lines(text, timestamps, line_lengths, max_line_length, boundaries, abbreviations,
@@ -281,7 +339,7 @@ def split_into_sentences(text, timestamps, abbreviations, language="en"):
     return sentences
 
 
-def parse_capture_file(file_object, abbreviations):
+def parse_capture_file(file_object, abbreviations, captioning_specials):
     """Parse the capture file, i.e. identify meta data, time stamps,
     etc."""
     timestamp_re = re.compile(r"^\d{14}\.\d{3}$")
@@ -308,7 +366,7 @@ def parse_capture_file(file_object, abbreviations):
         fields = line.split("|")
         if timestamp_re.search(fields[0]):
             if fields[2].startswith("SEG"):
-                new_sentences = split_into_sentences(text, timestamps, abbreviations)
+                new_sentences = split_into_sentences(text, timestamps, abbreviations, captioning_specials)
                 add_segment_tag(opened_segment, new_sentences)
                 sentences.extend(new_sentences)
                 text = []
@@ -387,7 +445,7 @@ def parse_capture_file(file_object, abbreviations):
                 except ValueError:
                     pass
             if fields[0] == "END":
-                new_sentences = split_into_sentences(text, timestamps, abbreviations)
+                new_sentences = split_into_sentences(text, timestamps, abbreviations, captioning_specials)
                 add_segment_tag(opened_segment, new_sentences)
                 sentences.extend(new_sentences)
                 text = []
@@ -568,8 +626,9 @@ def main():
     #    bracket_dictionary = load_bracket_dictionary()
     #    words_with_colons_dictionary = load_words_with_colons_dictionary()
     abbreviations = load_abbreviations(args.a)
+    captioning_specials = load_captioning_specials(args.c)
     sys.stderr.write("Processing " + args.FILE.name + "\n")
-    parse_capture_file(args.FILE, abbreviations)
+    parse_capture_file(args.FILE, abbreviations, captioning_specials)
 
 
 if __name__ == "__main__":
