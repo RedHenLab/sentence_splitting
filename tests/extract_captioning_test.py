@@ -36,7 +36,8 @@ class ExtractCaptioningTest(unittest.TestCase):
         text = ["Captioning funded by CBS", "and Ford.", "      cbs.ford.de", ">> Whitaker: THIS WAS THE FIRST"]
         text, captioning_tag = extract_captioning(text, self.specials)
         self.assertEqual([">> Whitaker: THIS WAS THE FIRST"], text)
-        self.assertEqual('<meta type="caption_credits" value="Captioning funded by CBS and Ford. cbs.ford.de"/>', captioning_tag)
+        self.assertEqual('<meta type="caption_credits" value="Captioning funded by CBS and Ford. cbs.ford.de"/>',
+                         captioning_tag)
 
     def test_specials(self):
         text = ["Captioning sponsored by", "CBS", "       C.S.I. PRODUCTIONS", "  and brought to you by Toyota.",
@@ -52,6 +53,28 @@ class ExtractCaptioningTest(unittest.TestCase):
         self.assertEqual([">> Whitaker: THIS WAS THE FIRST"], text)
         self.assertEqual('<meta type="caption_credits" value="Captioning founded by CBS and FORD. '
                          'We go further, so you can."/>', captioning_tag)
+
+        text = ["[captioning made possible by fox broadcasting company]",
+                "captioned by the national captioning institute", "-- www.ncicap.org --",
+                ">> Whitaker: THIS WAS THE FIRST"]
+        text, captioning_tag = extract_captioning(text, self.specials)
+        self.assertEqual([">> Whitaker: THIS WAS THE FIRST"], text)
+        self.assertEqual('<meta type="caption_credits" value="captioning made possible by fox broadcasting company '
+                         'captioned by the national captioning institute -- www.ncicap.org --"/>', captioning_tag)
+
+        text = ["captioning made possible by fox broadcasting company",
+                ">> Whitaker: THIS WAS THE FIRST"]
+        text, captioning_tag = extract_captioning(text, self.specials)
+        self.assertEqual([">> Whitaker: THIS WAS THE FIRST"], text)
+        self.assertEqual('<meta type="caption_credits" value="captioning made possible by fox broadcasting company"/>',
+                         captioning_tag)
+
+        text = ["captioning made possible by fox broadcasting company", "-- www.ncicap.org --",
+                ">> Whitaker: THIS WAS THE FIRST"]
+        text, captioning_tag = extract_captioning(text, self.specials)
+        self.assertEqual([">> Whitaker: THIS WAS THE FIRST"], text)
+        self.assertEqual('<meta type="caption_credits" value="captioning made possible by fox broadcasting company '
+                         '-- www.ncicap.org --"/>', captioning_tag)
 
 
 if __name__ == '__main__':

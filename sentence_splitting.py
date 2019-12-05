@@ -105,7 +105,7 @@ def load_captioning_specials(captioning_file):
             if s not in parent_dict:
                 s = s.strip()
                 parent_dict[s] = {}
-                parent_dict = parent_dict[s]
+            parent_dict = parent_dict[s]
     return captioning_specials
 
 
@@ -267,7 +267,7 @@ def extract_captioning(text, specials):
         # check if the line and the following ones match any captioning_special
         # if the line belongs to the found captioning_special lines
         if left_special_lines > 0:
-            captioning_content.append(line.strip())
+            captioning_content.append(line.strip(" []\t"))
             line_numbers_with_caption.append(i)
             left_special_lines -= 1
             continue
@@ -282,15 +282,15 @@ def extract_captioning(text, specials):
         next_line_starts_with_and = has_next_line and re.match(pattern_and, text[i+1]) is not None
         if not contains_a_by and not next_line_starts_with_by:
             continue    # is the word captioning or captioned within the normal story
-        captioning_content.append(line.strip())
+        captioning_content.append(line.strip(" []\t"))
         line_numbers_with_caption.append(i)
         used_lines = 1
         if ends_with_by or next_line_starts_with_by or (contains_a_by and next_line_starts_with_and):
-            captioning_content.append(text[i+used_lines].strip())   # next line is still captioning because of by or and
+            captioning_content.append(text[i+used_lines].strip(" []\t"))   # next line is still captioning because of by or and
             line_numbers_with_caption.append(i+used_lines)
             used_lines += 1
         if len(text) > i + used_lines and re.match(pattern_web_address, text[i+used_lines]):
-            captioning_content.append(text[i+used_lines].strip())  # add web address
+            captioning_content.append(text[i+used_lines].strip(" []\t"))  # add web address
             line_numbers_with_caption.append(i+used_lines)
 
     for i in reversed(line_numbers_with_caption):  # delete the captioning lines from text
@@ -311,6 +311,7 @@ def number_of_following_special_lines(i, left_special_lines, line, specials, tex
                 break
             if len(special_parent[fuzzy_key_l]) == 0:
                 left_special_lines = j + 1
+                break
             special_parent = special_parent[fuzzy_key_l]
     return left_special_lines
 
