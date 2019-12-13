@@ -609,7 +609,12 @@ def parse_capture_file(file_object, abbreviations, captioning_specials):
                 assert words_with_colons_dictionary[colonidentificationmatch.group(1)][0] == "i"
 #                print "<
         print(sentence)"""
-    print("\n<sentenceboundary />".join(sentences))
+    end_segment_tag = "\n</segment>"
+    sentence_boundary_tag = "\n<sentenceboundary />"
+    sentences_with_boundary_tags = [s + sentence_boundary_tag  if not s.endswith(end_segment_tag)
+                                    else s[:-len(end_segment_tag)] + sentence_boundary_tag + end_segment_tag
+                                    for s in sentences]
+    print("".join(sentences_with_boundary_tags))
     print("</text>")
 
 
