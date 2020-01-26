@@ -619,6 +619,8 @@ def parse_capture_file(file_object, abbreviations, captioning_specials):
 
 
 def add_segment_tag(opened_segment, new_sentences):
+    if opened_segment is None:
+        return new_sentences
     if len(new_sentences) == 0:
         new_sentences = [""]
     new_sentences[0] = opened_segment + new_sentences[0]
