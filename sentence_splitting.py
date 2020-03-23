@@ -242,13 +242,10 @@ def _check_end_of_lines(text, timestamps, line_lengths, max_line_length, boundar
 
 def get_fuzzy_key(key, dictionary, min_accuracy=95):
     """Gets the most matching key in the dictionary if its accuracy is at least min_accuracy else None"""
-    possible_keys = fuzzy.extract(key, dictionary.keys(), limit=1)
-    if len(possible_keys) == 0:
-        return None
-    fuzzy_key, accuracy = possible_keys[0]
-    if accuracy >= min_accuracy:
-        return fuzzy_key
-    return None
+    if key in dictionary:
+        return key  # use normal dictionary if key is directly found (Workaround for fuzzywuzzy bug with punctuation)
+    key = fuzzy.extractOne(key, dictionary.keys(), score_cutoff=min_accuracy)
+    return key[0] if key is not None else None
 
 
 def extract_captioning(text, specials):

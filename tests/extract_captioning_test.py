@@ -34,7 +34,7 @@ class ExtractCaptioningTest(unittest.TestCase):
 
     def test_with_web_address(self):
         text = ["Captioning funded by CBS", "and Ford.", "      cbs.ford.de", ">> Whitaker: THIS WAS THE FIRST"]
-        text, captioning_tag = extract_captioning(text, self.specials)
+        text, captioning_tag = extract_captioning(text, {})
         self.assertEqual([">> Whitaker: THIS WAS THE FIRST"], text)
         self.assertEqual('<meta type="caption_credits" value="Captioning funded by CBS and Ford. cbs.ford.de"/>',
                          captioning_tag)
