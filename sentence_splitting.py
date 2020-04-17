@@ -99,6 +99,8 @@ def load_captioning_specials(captioning_file):
     if captioning_file is None:
         return captioning_specials
     for line in captioning_file:
+        if line.strip().startswith("#"): # ignore commented lines
+            continue
         parent_dict = captioning_specials
         split = line.strip().split("\t")
         for s in split:

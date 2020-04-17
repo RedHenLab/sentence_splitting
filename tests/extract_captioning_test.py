@@ -5,7 +5,7 @@ from sentence_splitting import extract_captioning, load_captioning_specials
 class ExtractCaptioningTest(unittest.TestCase):
 
     def setUp(self) -> None:
-        with open("../captioning_specials.tsv", "r") as f:
+        with open("mock_captioning.tsv", "r") as f:
             self.specials = load_captioning_specials(f)
 
     def test_complete(self):
@@ -75,6 +75,12 @@ class ExtractCaptioningTest(unittest.TestCase):
         self.assertEqual([">> Whitaker: THIS WAS THE FIRST"], text)
         self.assertEqual('<meta type="caption_credits" value="captioning made possible by fox broadcasting company '
                          '-- www.ncicap.org --"/>', captioning_tag)
+
+        text = ["The cap_tioning was brought to you by:", "commercial...",
+                ">> Whitaker: THIS WAS THE FIRST"]
+        text, captioning_tag = extract_captioning(text, self.specials)
+        self.assertEqual(["The cap_tioning was brought to you by:", "commercial...", ">> Whitaker: THIS WAS THE FIRST"], text)
+        self.assertIsNone(captioning_tag)
 
 
 if __name__ == '__main__':
