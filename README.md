@@ -24,7 +24,7 @@ The optional parameter `-c captioning_specials.tsv` should denote a file, in whi
 ```
 Captioning funded by CBS\tand FORD.\tWe go further, so you can.
 ```
-with multiple lines per caption seperated by tabs(\t).
+with multiple lines per caption separated by tabs(\t).
 
 If this command terminates without printing an error message, the file is well-formed XML.
 
