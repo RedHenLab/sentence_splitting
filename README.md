@@ -2,9 +2,16 @@
 
 
 This currently only works for the English-language files.
-Usage:
+
+### Install:
 ```bash
-python3 sentence_splitting.py -a /path/to/nonbreaking_prefixes/ inputfile.txt | perl filter_metainfo_from_cclines.pl path/to/dictionaries | perl join_lines.pl > outputfile.xml
+git clone git@github.com:RedHenLab/sentence_splitting.git
+pip install -r requirements.txt
+```
+
+### Usage:
+```bash
+python3 sentence_splitting.py -a /path/to/nonbreaking_prefixes/ [-c captioning_specials.tsv] inputfile.txt | perl filter_metainfo_from_cclines.pl path/to/dictionaries | perl join_lines.pl > outputfile.xml
 ```
 
 The output is a well-formed XML file that contains exactly one sentence per line. XML tags relevant to the sentence are not guaranteed to be on the same line as the sentence.
@@ -13,6 +20,11 @@ To check that the file is ok, it can be tested with
 ```bash
 xmllint --noout outputfile.xml
 ```
+The optional parameter `-c captioning_specials.tsv` should denote a file, in which lines containing (non-spoken) captioning information are listed. For example
+```
+Captioning funded by CBS\tand FORD.\tWe go further, so you can.
+```
+with multiple lines per caption seperated by tabs(\t).
 
 If this command terminates without printing an error message, the file is well-formed XML.
 
