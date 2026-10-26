@@ -16,7 +16,7 @@ def command_line_arguments():
     """Create argparse object"""
     parser = argparse.ArgumentParser(description="Do sentence splitting on the given file.")
     parser.add_argument("-a", type=os.path.abspath, required=True,
-                        help="Directory with abbreviation files of format .+\..{2} where the last two characters indicate a language")
+                        help=r"Directory with abbreviation files of format .+\..{2} where the last two characters indicate a language")
     parser.add_argument("-c", type=argparse.FileType("r"), required=False,
                         help="File with special captioning lines")
     parser.add_argument("-l", type=str, help="Two-letter language code; defaults to 'en'")
@@ -117,7 +117,7 @@ def is_abbreviation(word, next_word, abbreviations, language):
         language = "en"
     if word.lower() in abbreviations[language]["regular"]:
         return True
-    if word.lower() in abbreviations[language]["numeric"] and re.search("^[+-]?\d+", next_word):
+    if word.lower() in abbreviations[language]["numeric"] and re.search(r"^[+-]?\d+", next_word):
         return True
     if re.search(r"\.\S+$", word):
         return True
@@ -135,7 +135,7 @@ def check_normal_case_sentences(sentences, abbreviations, language):
             new_sentences = []
             # tags as single tokens
             sentence = re.sub(r"(<ccline) (start=\S+) (end=[^>]+) (/>)", r"\1_\2_\3_\4", sentence)
-            words = re.split("\s+", sentence)
+            words = re.split(r"\s+", sentence)
             for i, word in enumerate(words):
                 word = re.sub(r"(<ccline)_(start=[^_]+)_(end=[^>_]+)_(/>)", r"\1 \2 \3 \4", word)
                 if i == 0:
@@ -197,14 +197,15 @@ def _check_end_of_lines(text, timestamps, line_lengths, max_line_length, boundar
         previous_line = re.sub(r"</?ccline[^>]*>", "", sentences[-1][-1])
         previous_line = xmlunescape(previous_line);
         sentences[-1][-1] += closing_tag
-        # if the previous line ends with "♪", we have a new sentence
-        previous_line_ends_with_sound_mark = previous_line.endswith("♪")
-        if previous_line_ends_with_sound_mark:
+        # if the previous line contains musical notes, we have a new sentence
+        previous_line_has_sound_mark = bool(re.search(r"[♪♫♩♬]", previous_line))
+        if previous_line_has_sound_mark:
             sentences.append([tagged_line])
             continue
-        # if the line begins with a boundary, we have a new sentence
-        first_word = re.split("\s+", line)[0]
-        if first_word in boundaries:
+        # if the line begins with a boundary or contains musical notes, we have a new sentence
+        first_word = re.split(r"\s+", line)[0]
+        line_has_music = bool(re.search(r"[♪♫♩♬]", line))
+        if first_word in boundaries or line_has_music:
             sentences.append([tagged_line])
             continue
         # first_word_starts_lc = first_word[0].islower()
@@ -215,7 +216,7 @@ def _check_end_of_lines(text, timestamps, line_lengths, max_line_length, boundar
         previous_line_ends_with_other_punct = re.search(r"[?!][])}'\"“”‘’]*$", previous_line)
         if previous_line_ends_with_period_only:
             first_word_would_have_fit = len(previous_line) + len(first_word) + 1 <= max_line_length
-            previous_words = re.split("\s+", previous_line)
+            previous_words = re.split(r"\s+", previous_line)
             previous_last_word = previous_words[len(previous_words) - 1]
             previous_last_word = re.sub(r"\.[])}'\"“”‘’]*$", "", previous_last_word)
             if previous_last_word.lower() in abbreviations[language]["no_boundary"]:
@@ -342,7 +343,7 @@ def split_into_sentences(text, timestamps, abbreviations, captioning_specials, l
 def parse_capture_file(file_object, abbreviations, captioning_specials):
     """Parse the capture file, i.e. identify meta data, time stamps,
     etc."""
-    timestamp_re = re.compile(r"^\d{14}\.\d{3}$")
+    timestamp_re = re.compile(r"^\d{14}(?:\.\d{1,3})?$")
     # changed one_field_metadata and two_field_metadata since that is not a sensible distinction (there may be one or two field in VID, for instance)
     file_level_metadata = set(
         ["TOP", "COL", "UID", "PID", "ACQ", "DUR", "VID", "TTL", "URL", "TTS", "SRC", "CMT", "LAN", "TTP", "HED", "OBT",
@@ -365,14 +366,22 @@ def parse_capture_file(file_object, abbreviations, captioning_specials):
         line = line.strip()
         fields = line.split("|")
         if timestamp_re.search(fields[0]):
-            if fields[2].startswith("SEG"):
+            is_seg = len(fields) > 2 and (
+                fields[2].startswith("SEG") or any(f.startswith("Type=Commercial") for f in fields[2:])
+            )
+            if is_seg:
                 new_sentences = split_into_sentences(text, timestamps, abbreviations, captioning_specials)
                 add_segment_tag(opened_segment, new_sentences)
                 sentences.extend(new_sentences)
                 text = []
                 timestamps = []
-                if len(fields) > 3:
-                    segment_type = fields[3].split("=")[-1]
+                for f in fields[2:]:
+                    if f.lower().startswith('type='):
+                        segment_type = f.split('=')[-1]
+                        break
+                else:
+                    if len(fields) > 3:
+                        segment_type = fields[3].split('=')[-1]
             elif fields[2] == "CC1" or fields[2] == "CCO" or fields[2] == "TR0" or fields[
                 2] == "TR1":  # Verify this is doing the right thing...
                 text.extend(fields[3:])
@@ -541,7 +550,7 @@ def parse_capture_file(file_object, abbreviations, captioning_specials):
         local_broadcast_date, local_broadcast_time, local_broadcast_timezone))
 
     sys.stdout.write(">")
-    """    storyboundary = re.compile(r'(?<=>)(\s*>>>\s*)+')
+    r"""    storyboundary = re.compile(r'(?<=>)(\s*>>>\s*)+')
     storyboundaryeol = re.compile(r'(?<!("|\'|/))(?:\s*>>>\s*)+</ccline')
     turnboundary = re.compile(r'(?<=>)(\s*>>\s*)+')
     turnboundaryeol = re.compile(r'(?<!("|\'|/))(?:\s*>>\s*)+</ccline')

@@ -1,3 +1,4 @@
+import os
 import unittest
 from sentence_splitting import extract_captioning, load_captioning_specials
 
@@ -5,7 +6,8 @@ from sentence_splitting import extract_captioning, load_captioning_specials
 class ExtractCaptioningTest(unittest.TestCase):
 
     def setUp(self) -> None:
-        with open("mock_captioning.tsv", "r") as f:
+        mock_path = os.path.join(os.path.dirname(__file__), "mock_captioning.tsv")
+        with open(mock_path, "r", encoding="utf-8") as f:
             self.specials = load_captioning_specials(f)
 
     def test_complete(self):
